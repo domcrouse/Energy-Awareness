@@ -7,6 +7,8 @@ public class InteractionScript : MonoBehaviour, IPointerClickHandler, IPointerEn
 {
     public List<GameObject> options;
     public static bool clicked;
+    [Range(2,5)]
+    public float distanceToInteract = 2.5f;
     Transform player;
     public Material highlightMat;
     Material oldMat;
@@ -21,7 +23,7 @@ public class InteractionScript : MonoBehaviour, IPointerClickHandler, IPointerEn
     public void OnPointerClick(PointerEventData eventData)
     {
         StopAllCoroutines();
-        if (Vector3.Magnitude(player.position - transform.position) < 2.5)
+        if (Vector3.Magnitude(player.position - transform.position) < distanceToInteract)
         {
             MenuOptions.Show(options);
             for (int i = 0; i < options.Count; i++)

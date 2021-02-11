@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MenuOptions : MonoBehaviour
 {
-    public Text descriptionText;
+    GameObject firstOption;
     
 
     static MenuOptions instance;
@@ -13,12 +13,14 @@ public class MenuOptions : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        firstOption = transform.GetChild(0).gameObject;
         gameObject.SetActive(false);
     }
 
     public static void Show(List<GameObject> optionsToShow)
     {
         instance.gameObject.SetActive(true);
+        instance.firstOption.SetActive(true);
         for (int i = 0; i < optionsToShow.Count; i++)
         {
             optionsToShow[i].SetActive(true);
