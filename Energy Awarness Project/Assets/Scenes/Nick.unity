@@ -344,6 +344,7 @@ MonoBehaviour:
   options:
   - {fileID: 1241149061}
   - {fileID: 2083639668}
+  highlightMat: {fileID: 2100000, guid: 1cc38d69243755047a951f00efcd7d3f, type: 2}
 --- !u!65 &96624795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2474,6 +2475,7 @@ MonoBehaviour:
   options:
   - {fileID: 41145953}
   - {fileID: 1136792741}
+  highlightMat: {fileID: 2100000, guid: 1cc38d69243755047a951f00efcd7d3f, type: 2}
 --- !u!65 &1934710495
 BoxCollider:
   m_ObjectHideFlags: 0

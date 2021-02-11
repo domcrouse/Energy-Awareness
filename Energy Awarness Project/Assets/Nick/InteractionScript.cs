@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InteractionScript : MonoBehaviour, IPointerClickHandler
+public class InteractionScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public List<GameObject> options;
     public static bool clicked;
     Transform player;
+    public Material highlightMat;
+    Material oldMat;
+    MeshRenderer mRenderer;
 
     private void Awake()
     {
         player = FindObjectOfType<PlayerScript>().transform;
+        mRenderer = GetComponent<MeshRenderer>();
+        oldMat = mRenderer.material;
     }
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -38,5 +43,15 @@ public class InteractionScript : MonoBehaviour, IPointerClickHandler
     {
         MenuOptions.Hide(options);
         clicked = false;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        mRenderer.material = highlightMat;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        GetComponent<Renderer>().material = oldMat;
     }
 }
