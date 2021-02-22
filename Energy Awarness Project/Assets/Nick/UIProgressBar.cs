@@ -33,6 +33,12 @@ public class UIProgressBar : MonoBehaviour
     public Color color;
     public TMPro.TMP_Text value;
 
+    public static UIProgressBar Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Update()
     {
         GetCurrentFill();
