@@ -7,17 +7,18 @@ public class PlayerScript : MonoBehaviour
 {
     [Header("Components")]
     public NavMeshAgent agent;
+    Animator anim;
     bool isInteractive = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
-        if (isInteractive && agent.remainingDistance < 1)
+        if (isInteractive && agent.remainingDistance < 0.6f)
         {
             isInteractive = false;
             InteractiveOptions.Instance.ShowOptions();
@@ -43,6 +44,8 @@ public class PlayerScript : MonoBehaviour
                 agent.destination = hit.point;
             }
         }
+        anim.SetFloat("turn", Vector3.Dot(transform.right, agent.velocity));
+        if (agent.remainingDistance > 0.6f) { anim.SetBool("moving", true); } else anim.SetBool("moving", false);
     }
 
 }
