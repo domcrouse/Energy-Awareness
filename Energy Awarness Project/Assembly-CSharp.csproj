@@ -60,12 +60,14 @@
     <Compile Include="Assets\Liam\Movement.cs" />
     <Compile Include="Assets\Nick\OldScripts\MenuOptions.cs" />
     <Compile Include="Assets\Nick\UIProgressBar.cs" />
-    <Compile Include="Assets\Nick\PlayerScript.cs" />
-    <Compile Include="Assets\Nick\GameEvents.cs" />
-    <Compile Include="Assets\Nick\LightController.cs" />
-    <Compile Include="Assets\Nick\InteractiveOptions.cs" />
-    <Compile Include="Assets\Nick\ButtonScript.cs" />
     <Compile Include="Assets\Nick\TriggerScript.cs" />
+    <Compile Include="Assets\Nick\PlayerScript.cs" />
+    <Compile Include="Assets\Nick\LightController.cs" />
+    <Compile Include="Assets\Nick\GameEvents.cs" />
+    <Compile Include="Assets\Nick\ButtonScript.cs" />
+    <Compile Include="Assets\Nick\InteractiveOptions.cs" />
+    <Compile Include="Assets\Nick\CameraControl.cs" />
+    <Compile Include="Assets\Nick\ZoomSlider.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -277,9 +279,6 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.14f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.14f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

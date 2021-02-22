@@ -27,8 +27,11 @@ public class InteractiveOptions : MonoBehaviour
 
     public void GetTrigger(TriggerScript trigger) 
     {
-        currentTrigger = trigger;
-        Setup();
+        if (Time.timeScale == 1)
+        {
+            currentTrigger = trigger;
+            Setup();
+        }
     }
     public void ShowOptions()
     {

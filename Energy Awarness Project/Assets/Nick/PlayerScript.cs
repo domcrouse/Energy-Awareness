@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        CameraControl.Instance.FocusOn(transform);
     }
 
     void FixedUpdate()
@@ -21,6 +22,7 @@ public class PlayerScript : MonoBehaviour
         if (isInteractive && agent.remainingDistance < 0.6f)
         {
             isInteractive = false;
+            agent.SetDestination(transform.position);
             InteractiveOptions.Instance.ShowOptions();
         }
 

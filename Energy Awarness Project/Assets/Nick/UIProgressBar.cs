@@ -53,6 +53,7 @@ public class UIProgressBar : MonoBehaviour
 
         fill.color = color;
     }
+    public void AddToMax(int value) { maximum += value; }
 
     public void ChangeAmount(int changeInValue) { current += changeInValue; }
 }

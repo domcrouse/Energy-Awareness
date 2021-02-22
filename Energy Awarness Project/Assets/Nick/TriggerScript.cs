@@ -33,6 +33,8 @@ public class TriggerScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         mRenderer = GetComponent<MeshRenderer>();
         previousMat = mRenderer.material;
+        UIProgressBar.Instance.AddToMax(power);
+        if (isOn) { UIProgressBar.Instance.ChangeAmount(power); }
     }
     public bool CheckIfOn() { return isOn; }
     public void SetIsOn(bool setOn) { isOn = setOn; }
