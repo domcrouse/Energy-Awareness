@@ -7,15 +7,25 @@ public class PlayerScript : MonoBehaviour
 {
     [Header("Components")]
     public NavMeshAgent agent;
+    Animator anim;
+    bool isInteractive = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        CameraControl.Instance.FocusOn(transform);
     }
 
     void FixedUpdate()
     {
+        if (isInteractive && agent.remainingDistance < 0.6f)
+        {
+            isInteractive = false;
+            agent.SetDestination(transform.position);
+            InteractiveOptions.Instance.ShowOptions();
+        }
+
         if (InteractionScript.clicked) { agent.destination = transform.position; return; }
         //Navigation for arrow keys
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
@@ -32,8 +42,12 @@ public class PlayerScript : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
             {
+                if (hit.transform.tag == "Interactive") { isInteractive = true; }
                 agent.destination = hit.point;
             }
         }
+        anim.SetFloat("turn", Vector3.Dot(transform.right, agent.velocity));
+        if (agent.remainingDistance > 0.6f) { anim.SetBool("moving", true); } else anim.SetBool("moving", false);
     }
+
 }
