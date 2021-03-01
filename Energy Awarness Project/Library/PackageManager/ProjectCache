@@ -1,19 +1,21 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Liam/Desktop/Energy-Awareness/Energy Awarness Project/Packages/manifest.json
+    m_FilePath: C:/Users/Dmart/Documents/GitHub/Energy-Awareness/Energy Awarness
+      Project/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637497736790703767
-    m_Hash: 3670018741
+      ticks: 637500405141018077
+    m_Hash: 2429001870
   m_LockFileStatus:
-    m_FilePath: C:/Users/Liam/Desktop/Energy-Awareness/Energy Awarness Project/Packages/packages-lock.json
+    m_FilePath: C:/Users/Dmart/Documents/GitHub/Energy-Awareness/Energy Awarness
+      Project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637497736985717961
+      ticks: 637500405145867110
     m_Hash: 664634206
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -25,7 +27,8 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\Liam\Desktop\Energy-Awareness\Energy Awarness Project\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+        Project\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -120,7 +123,8 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.1
       source: 1
-      resolvedPath: C:\Users\Liam\Desktop\Energy-Awareness\Energy Awarness Project\Library\PackageCache\com.unity.ide.rider@1.2.1
+      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+        Project\Library\PackageCache\com.unity.ide.rider@1.2.1
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -221,7 +225,8 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.3
       source: 1
-      resolvedPath: C:\Users\Liam\Desktop\Energy-Awareness\Energy Awarness Project\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
+      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+        Project\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -292,7 +297,8 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\Liam\Desktop\Energy-Awareness\Energy Awarness Project\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+        Project\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -361,7 +367,8 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.18
       source: 1
-      resolvedPath: C:\Users\Liam\Desktop\Energy-Awareness\Energy Awarness Project\Library\PackageCache\com.unity.test-framework@1.1.18
+      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+        Project\Library\PackageCache\com.unity.test-framework@1.1.18
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -451,7 +458,8 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: C:\Users\Liam\Desktop\Energy-Awareness\Energy Awarness Project\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+        Project\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -602,7 +610,8 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.6
       source: 1
-      resolvedPath: C:\Users\Liam\Desktop\Energy-Awareness\Energy Awarness Project\Library\PackageCache\com.unity.timeline@1.3.6
+      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+        Project\Library\PackageCache\com.unity.timeline@1.3.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -2562,7 +2571,8 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 1
-      resolvedPath: C:\Users\Liam\Desktop\Energy-Awareness\Energy Awarness Project\Library\PackageCache\com.unity.ext.nunit@1.0.0
+      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+        Project\Library\PackageCache\com.unity.ext.nunit@1.0.0
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2620,5 +2630,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/Liam/Desktop/Energy-Awareness/Energy Awarness Project/Packages
+m_ProjectPath: C:/Users/Dmart/Documents/GitHub/Energy-Awareness/Energy Awarness Project/Packages
 m_EditorVersion: 2020.1.14f1 (d81f64f5201d)
