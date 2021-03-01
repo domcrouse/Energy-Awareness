@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Dimi.unity
+- path: Assets/Work on scenes/DImi.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

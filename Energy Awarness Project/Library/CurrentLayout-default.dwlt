@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 52
+  controlID: 140
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 433, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 53
+  controlID: 141
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 54
+  controlID: 85
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 505
     height: 781
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -509,7 +509,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2cfbffff
+      m_ExpandedIDs: 44f4ffffc8f6ffff60fbffffaa380000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -570,9 +570,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -231.69221, y: -474.76273, z: 810.61035}
+    m_Target: {x: -337.75067, y: -405.17245, z: 804.48157}
     speed: 2
-    m_Value: {x: -231.69221, y: -474.76273, z: 810.61035}
+    m_Value: {x: -337.75067, y: -405.17245, z: 804.48157}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -619,9 +619,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.24863033, y: 0.13578755, z: -0.0352254, w: -0.95846415}
+    m_Target: {x: -0.2088321, y: 0.196257, z: -0.042827267, w: -0.95717746}
     speed: 2
-    m_Value: {x: -0.24861172, y: 0.13577738, z: -0.03522276, w: -0.9583924}
+    m_Value: {x: -0.2088804, y: 0.19480637, z: -0.042510774, w: -0.9573988}
   m_Size:
     m_Target: 493.61438
     speed: 2
@@ -717,23 +717,23 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1086
-      height: 531
-    m_Scale: {x: 0.69140625, y: 0.69140625}
-    m_Translation: {x: 543, y: 265.5}
+      height: 552
+    m_Scale: {x: 0.71875, y: 0.71875}
+    m_Translation: {x: 543, y: 276}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -785.35596
+      x: -755.4783
       y: -384
-      width: 1570.7119
+      width: 1510.9565
       height: 768
     m_MinimalGUI: 1
-  m_defaultScale: 0.69140625
+  m_defaultScale: 0.71875
   m_LastWindowPixelSize: {x: 1086, y: 552}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -869,12 +869,12 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Work on scenes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/SteamVR
+  - Assets/Work on scenes
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
     Project
@@ -882,9 +882,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c23b0000
-    m_LastClickedID: 15298
-    m_ExpandedIDs: 00000000c03b0000c23b0000e83b000000ca9a3b
+    m_SelectedIDs: 723f0000
+    m_LastClickedID: 16242
+    m_ExpandedIDs: 000000001e3a0000643f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -912,7 +912,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c03b0000c23b0000
+    m_ExpandedIDs: 000000001c3a00001e3a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300007e3a0000404b0000484b0000bc360000e64800002e370000ac640000b44d0000524d0000624d00005a4d00006a4d0000744d00007c4d0000844d0000984d0000a04d0000a84d00006a4e00004c4e0000384e0000424e00008a4e0000724e00007a4e0000824e000000000000e8640000784c0000ec3f00000c4000004a500000e45b0000a239000098390000544b0000bc450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
