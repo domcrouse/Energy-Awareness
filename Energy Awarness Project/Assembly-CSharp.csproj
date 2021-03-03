@@ -58,18 +58,24 @@
   <ItemGroup>
     <Compile Include="Assets\Nick\OldScripts\InteractionScript.cs" />
     <Compile Include="Assets\Liam\Movement.cs" />
+    <Compile Include="Assets\Nick\PlayerInteract.cs" />
+    <Compile Include="Assets\Nick\RoomGoalsScriptable.cs" />
     <Compile Include="Assets\Nick\OldScripts\MenuOptions.cs" />
-    <Compile Include="Assets\Nick\UIProgressBar.cs" />
-    <Compile Include="Assets\Nick\TriggerScript.cs" />
-    <Compile Include="Assets\Nick\PlayerScript.cs" />
+    <Compile Include="Assets\Nick\DemoFiles\UIProgressBar.cs" />
+    <Compile Include="Assets\Nick\DemoFiles\TriggerScript.cs" />
+    <Compile Include="Assets\Nick\DemoFiles\PlayerScript.cs" />
     <Compile Include="Assets\Nick\LightController.cs" />
     <Compile Include="Assets\Nick\GameEvents.cs" />
-    <Compile Include="Assets\Nick\ButtonScript.cs" />
-    <Compile Include="Assets\Nick\ZoomSlider.cs" />
-    <Compile Include="Assets\Nick\CameraControl.cs" />
-    <Compile Include="Assets\Nick\InteractiveOptions.cs" />
     <Compile Include="Assets\Dimi\Scripts\MouseHandler.cs" />
+    <Compile Include="Assets\Nick\DemoFiles\ButtonScript.cs" />
+    <Compile Include="Assets\Nick\GoalManager.cs" />
+    <Compile Include="Assets\Nick\DemoFiles\ZoomSlider.cs" />
+    <Compile Include="Assets\Nick\iInteract.cs" />
+    <Compile Include="Assets\Nick\LightSwitch.cs" />
+    <Compile Include="Assets\Nick\ObjectHighlight.cs" />
+    <Compile Include="Assets\Nick\DemoFiles\CameraControl.cs" />
     <Compile Include="Assets\Dimi\Scripts\MovementController.cs" />
+    <Compile Include="Assets\Nick\DemoFiles\InteractiveOptions.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -627,17 +633,38 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.14f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -645,8 +672,17 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>

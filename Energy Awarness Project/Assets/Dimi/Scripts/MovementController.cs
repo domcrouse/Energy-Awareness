@@ -9,6 +9,8 @@ public class MovementController : MonoBehaviour
     public float gravity = 9.8f;
     public float velocity = 0;
 
+
+
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -19,7 +21,7 @@ public class MovementController : MonoBehaviour
         // player movement - forward, backward, left, right
         float horizontal = Input.GetAxis("Horizontal") * movementSpeed;
         float vertical = Input.GetAxis("Vertical") * movementSpeed;
-        characterController.Move((Vector3.right * horizontal + Vector3.forward * vertical) * Time.deltaTime);
+        characterController.Move((transform.right * horizontal + transform.forward * vertical) * Time.deltaTime);
 
         // Gravity
         if (characterController.isGrounded)
@@ -31,5 +33,6 @@ public class MovementController : MonoBehaviour
             velocity -= gravity * Time.deltaTime;
             characterController.Move(new Vector3(0, velocity, 0));
         }
+
     }
 }

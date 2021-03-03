@@ -6,28 +6,33 @@ public class MouseHandler : MonoBehaviour
 {
     // horizontal rotation speed
     public float horizontalSpeed = 1f;
-    // vertical rotation speed
     public float verticalSpeed = 1f;
-    private float xRotation = 0.0f;
+    // vertical rotation speed
     private float yRotation = 0.0f;
+    private float xRotation = 0.0f;
     private Camera cam;
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         cam = Camera.main.gameObject.GetComponent<Camera>();
     }
 
     void Update()
     {
         //retrieves the x axis of the mouse
-        float mouseX = Input.GetAxis("Mouse X") * horizontalSpeed;
+        float mouseY = Input.GetAxis("Mouse Y") * horizontalSpeed;
         //retrieves the y axis of the mouse
-        float mouseY = Input.GetAxis("Mouse Y") * verticalSpeed;
+        float mouseX = Input.GetAxis("Mouse X") * verticalSpeed;
 
-        yRotation += mouseX;
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90, 90);
+        xRotation = mouseX;
+        yRotation = -mouseY;
 
-        cam.transform.eulerAngles = new Vector3(xRotation, yRotation, 0.0f);
+        yRotation = Mathf.Clamp(yRotation, -90, 90);
+
+        cam.transform.Rotate(yRotation, 0, 0);
+        transform.Rotate(0, xRotation, 0);
     }
 }
