@@ -8,10 +8,11 @@ public class MovementController : MonoBehaviour
     public float movementSpeed = 1;
     public float gravity = 9.8f;
     public float velocity = 0;
+    public bool isClimbing = false;
 
 
 
-    private void Start()
+    public void Start()
     {
         characterController = GetComponent<CharacterController>();
     }
@@ -24,7 +25,7 @@ public class MovementController : MonoBehaviour
         characterController.Move((transform.right * horizontal + transform.forward * vertical) * Time.deltaTime);
 
         // Gravity
-        if (characterController.isGrounded)
+        if (characterController.isGrounded || isClimbing)
         {
             velocity = 0;
         }
