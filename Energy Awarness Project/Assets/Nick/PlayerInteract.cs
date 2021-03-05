@@ -10,12 +10,14 @@ public class PlayerInteract : MonoBehaviour
 
     private void Awake()
     {//Direction of raycast
-        fwd = transform.TransformDirection(Vector3.forward);
+        fwd = transform.TransformDirection(transform.forward);
     }
     void Update()
     {
-        if (Physics.Raycast(transform.position, fwd,out hit, 10))
+        fwd = transform.TransformDirection(transform.forward);
+        if (Physics.Raycast(transform.position + transform.forward, fwd,out hit, 10))
         {
+            Debug.DrawRay(transform.position + transform.forward, fwd);
             if (hit.transform.gameObject.GetComponent<ObjectHighlight>())
             {
                 hit.transform.gameObject.GetComponent<ObjectHighlight>().Highlight();

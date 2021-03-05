@@ -24,7 +24,7 @@ public class ObjectHighlight : MonoBehaviour
 
     IEnumerator LightUp()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(5);
         mesh.material = prevMat;
     }
 }
