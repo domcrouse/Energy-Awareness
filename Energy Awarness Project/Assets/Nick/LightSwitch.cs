@@ -7,15 +7,20 @@ public class LightSwitch : MonoBehaviour, iInteract
     public int id;
     public int power;
     bool isOn = true;
+
     public void Interact()
     {
+
+
         if (isOn)
         {
             GameEvents.current.TurnLightOff(id);
+            isOn = false;
         }
         else 
         {
-            GameEvents.current.TurnLightOn(id); 
+            GameEvents.current.TurnLightOn(id);
+            isOn = true;
         }
     }
 }

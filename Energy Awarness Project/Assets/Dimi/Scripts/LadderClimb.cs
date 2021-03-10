@@ -9,7 +9,7 @@ public class LadderClimb : MonoBehaviour
     public float speed = 1;
 
 
-    
+
 
     void OnTriggerEnter(Collider col)
     {

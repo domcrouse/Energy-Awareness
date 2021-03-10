@@ -9,6 +9,8 @@ public class LightController : MonoBehaviour
     [Range(0, 1)]
     public float lightOffValue = 0.2f;
     Light lamp;
+    public float lightOnVal = 7;
+
     private void Start()
     {
         GameEvents.current.onTurnLightOn += OnLightOn;
@@ -19,7 +21,7 @@ public class LightController : MonoBehaviour
     {
         if (id == this.id)
         {
-            lamp.intensity = 1;
+            lamp.intensity = lightOnVal;
         }
     }
     void OnLightOff(int id)
