@@ -77,8 +77,12 @@ public class GoalManager : MonoBehaviour
     }
     public void ChangeCurrentGoalNum(Goal.goalType type, int amount)
     {
-        goals.goals[GetGoalNum(type)].AlterCurrentNum(amount);
-        RefreshGoalList();
+        if (GetGoalNum(type) > -1)
+        {
+            goals.goals[GetGoalNum(type)].AlterCurrentNum(amount);
+            RefreshGoalList();
+        }
+        else { Debug.Log("Goal doesn't exist"); }
     }
     int GetGoalNum(Goal.goalType type)
     {
@@ -130,11 +134,17 @@ public class GoalManager : MonoBehaviour
     {
         for (int i = 0; i < goals.goals.Count; i++)
         {//Make new textmesh pros and writes the goals with target numbers
-            GameObject goal = new GameObject();
-            goal.AddComponent<TMP_Text>();
-            goal.GetComponent<TMP_Text>().text = GetGoalString(i);
+            GameObject goal = new GameObject("GoalText");
             goal.transform.SetParent(GoalTextArea);
+            goal.transform.localEulerAngles = Vector3.zero;
+            goal.transform.localPosition = Vector3.zero;
+            TMP_Text text = goal.AddComponent<TextMeshProUGUI>();
+            text.text = GetGoalString(i);
+            text.fontSize = 0.2f;
             if (goals.goals[i].type == Goal.goalType.TempAlter) { ChangeCurrentGoalNum(i, roomTemp); }
+            if (goals.goals[i].type == Goal.goalType.EnergyLevel) { ChangeCurrentGoalNum(i, UIProgressBar.Instance.current); }
+            goals.goals[i].ResetCurrent();
         }
+        RefreshGoalList();
     }
 }

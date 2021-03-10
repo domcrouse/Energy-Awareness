@@ -22,6 +22,7 @@ public class LightController : MonoBehaviour
         if (id == this.id)
         {
             lamp.intensity = lightOnVal;
+            GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.LightsOff, -1);
         }
     }
     void OnLightOff(int id)
@@ -29,6 +30,7 @@ public class LightController : MonoBehaviour
         if (id == this.id)
         {
             lamp.intensity = lightOffValue;
+            GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.LightsOff, 1);
         }
     }
 

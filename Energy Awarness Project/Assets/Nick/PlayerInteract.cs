@@ -29,7 +29,6 @@ public class PlayerInteract : MonoBehaviour
                 if (Input.GetButtonDown("Fire1")) {
                     //This might not work. ??
                     iInteract interact = hit.transform.gameObject.GetComponentInChildren<iInteract>();
-                    Debug.Log(hit.transform.gameObject);
                     if (interact != null)
                     {
                         interact.Interact();

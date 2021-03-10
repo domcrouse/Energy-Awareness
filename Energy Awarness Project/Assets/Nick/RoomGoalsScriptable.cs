@@ -27,4 +27,5 @@ public class Goal
     }
     public int GetCurrentNum() { return currentNum; }
     public void AlterCurrentNum(int amountToAdd) { currentNum += amountToAdd; }
+    public void ResetCurrent() { currentNum = 0; }
 }

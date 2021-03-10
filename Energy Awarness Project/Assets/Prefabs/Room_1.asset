@@ -16,3 +16,6 @@ MonoBehaviour:
   - type: 0
     targetNumber: 1
     scoreAward: 50
+  - type: 3
+    targetNumber: 50
+    scoreAward: 50
