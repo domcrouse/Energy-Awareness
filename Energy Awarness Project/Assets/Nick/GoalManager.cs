@@ -23,6 +23,9 @@ public class GoalManager : MonoBehaviour
     private void Awake()
     {
         current = this;
+    }
+    private void OnEnable()
+    {
         SetGoals();
     }
 
@@ -141,9 +144,8 @@ public class GoalManager : MonoBehaviour
             TMP_Text text = goal.AddComponent<TextMeshProUGUI>();
             text.text = GetGoalString(i);
             text.fontSize = 0.2f;
-            if (goals.goals[i].type == Goal.goalType.TempAlter) { ChangeCurrentGoalNum(i, roomTemp); }
-            if (goals.goals[i].type == Goal.goalType.EnergyLevel) { ChangeCurrentGoalNum(i, UIProgressBar.Instance.current); }
             goals.goals[i].ResetCurrent();
+            if (goals.goals[i].type == Goal.goalType.TempAlter) { ChangeCurrentGoalNum(i, roomTemp); }
         }
         RefreshGoalList();
     }

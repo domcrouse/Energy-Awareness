@@ -20,12 +20,12 @@ public class PlayerInteract : MonoBehaviour
         {
             if (hit.collider.tag == "Interactive")
             {
-            Debug.DrawRay(transform.position + transform.forward, fwd);
+                Debug.DrawRay(transform.position + transform.forward, fwd);
                 if (hit.transform.gameObject.GetComponent<ObjectHighlight>())
                 {
                     hit.transform.gameObject.GetComponent<ObjectHighlight>().Highlight();
                 }
-
+                /*
                 if (Input.GetButtonDown("Fire1")) {
                     //This might not work. ??
                     iInteract interact = hit.transform.gameObject.GetComponentInChildren<iInteract>();
@@ -34,7 +34,7 @@ public class PlayerInteract : MonoBehaviour
                         interact.Interact();
                     } 
 
-                }
+                }*/
             }
             
 
