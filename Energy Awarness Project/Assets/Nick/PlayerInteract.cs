@@ -16,7 +16,7 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         fwd = transform.TransformDirection(transform.forward);
-        if (Physics.SphereCast(transform.position, 1, fwd, out hit, 10))
+        if (Physics.SphereCast(transform.position, 1, transform.forward, out hit, 10))
         {
             if (hit.collider.tag == "Interactive")
             {
