@@ -290,8 +290,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  lightOffValue: 0
+  energy: 50
+  energyMultiplyerLED: 0.25
+  lightOffValue: 0.1
   lightOnVal: 7
+  standardColor: {r: 1, g: 0.9746712, b: 0.8254717, a: 1}
+  LEDColor: {r: 0.8915094, g: 0.9916041, b: 1, a: 0.7882353}
 --- !u!114 &7672215649252722071
 MonoBehaviour:
   m_ObjectHideFlags: 0

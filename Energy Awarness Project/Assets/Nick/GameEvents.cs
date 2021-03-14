@@ -54,21 +54,45 @@ public class GameEvents : MonoBehaviour
             onChangeLightbulb(id);
         }
     }
+    public event Action<int> onSwitchLightbulb;
+    public void SwitchLightbulb(int id)
+    {
+        if (onSwitchLightbulb != null)
+        {
+            onSwitchLightbulb(id);
+        }
+    }
 
-    public event Action<int> onPickUpPoster;
-    public void PickUpPoster(int id)
+    public event Action onPickUpPoster;
+    public void PickUpPoster()
     {
         if (onPickUpPoster != null)
         {
-            onPickUpPoster(id);
+            onPickUpPoster();
         }
     }
     public event Action<int> onDeliverPoster;
-    public void DeliverPoster(int id)
+    public void DeliverPoster(int amount)
     {
         if (onDeliverPoster != null)
         {
-            onDeliverPoster(id);
+            onDeliverPoster(amount);
+        }
+    }
+    public event Action<int> onUnlockDoor;
+    public void UnlockDoor(int id)
+    {
+        if(onUnlockDoor != null)
+        {
+            onUnlockDoor(id);
+        }
+    }
+    public event Action<int> onChangeTemp;
+    public void ChangeTemp(int amount)
+    {
+        if(onChangeTemp!= null)
+        {
+            onChangeTemp(amount);
         }
     }
 }

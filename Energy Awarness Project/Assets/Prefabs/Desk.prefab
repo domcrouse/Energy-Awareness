@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1029951051}
   - component: {fileID: 1029951052}
   - component: {fileID: 1029951053}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,8 +106,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  energy: 0
+  energyMultiplyerLED: 0
   lightOffValue: 0
   lightOnVal: 1
+  standardColor: {r: 0, g: 0, b: 0, a: 0}
+  LEDColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2562333304779718085
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2562333304779717690}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +174,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  power: 50
 --- !u!114 &5438542536342271172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +197,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1d503b89d5aef134282d8fc38e41f52c, type: 3}
       propertyPath: m_Name
       value: mesh_chair02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1d503b89d5aef134282d8fc38e41f52c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1d503b89d5aef134282d8fc38e41f52c, type: 3}
       propertyPath: m_RootOrder
@@ -258,6 +265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mesh_l_table (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1ecf1a56521a0df459d3e2497fc5a210, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ecf1a56521a0df459d3e2497fc5a210, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -320,6 +331,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_Name
       value: mesh_PC_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_TagString
@@ -517,6 +532,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_Name
       value: mesh_PC_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 49ddef57dd87da2489028c9f6666f2fc, type: 3}
       propertyPath: m_RootOrder

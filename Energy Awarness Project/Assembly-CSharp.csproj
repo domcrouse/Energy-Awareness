@@ -81,6 +81,11 @@
     <Compile Include="Assets\Dimi\Scripts\MovementController.cs" />
     <Compile Include="Assets\Liam\TestJson.cs" />
     <Compile Include="Assets\Nick\DemoFiles\InteractiveOptions.cs" />
+    <Compile Include="Assets\Nick\PickupPoster.cs" />
+    <Compile Include="Assets\Nick\DeliverPoster.cs" />
+    <Compile Include="Assets\Nick\UIPosters.cs" />
+    <Compile Include="Assets\Nick\ChangeTemp.cs" />
+    <Compile Include="Assets\Nick\TempControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

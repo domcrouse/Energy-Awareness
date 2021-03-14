@@ -6,16 +6,25 @@ using UnityEngine;
 public class LightController : MonoBehaviour
 {
     public int id;
+    public int energy;
+    [Range(0.1f, 1)]
+    public float energyMultiplyerLED;
     [Range(0, 1)]
     public float lightOffValue = 0.2f;
     Light lamp;
     public float lightOnVal = 7;
+    public Color standardColor;
+    public Color LEDColor;
 
     private void Start()
     {
         GameEvents.current.onTurnLightOn += OnLightOn;
         GameEvents.current.onTurnLightOff += OnLightOff;
         lamp = GetComponent<Light>();
+        lamp.color = standardColor;
+        UIProgressBar.Instance.AddToMax(energy);
+        UIProgressBar.Instance.ChangeAmount(energy);
+        GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, energy);
     }
     void OnLightOn(int id)
     {
@@ -23,6 +32,8 @@ public class LightController : MonoBehaviour
         {
             lamp.intensity = lightOnVal;
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.LightsOff, -1);
+            GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, energy);
+            UIProgressBar.Instance.ChangeAmount(energy);
         }
     }
     void OnLightOff(int id)
@@ -31,6 +42,28 @@ public class LightController : MonoBehaviour
         {
             lamp.intensity = lightOffValue;
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.LightsOff, 1);
+            GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, -energy);
+            UIProgressBar.Instance.ChangeAmount(-energy);
+        }
+    }
+
+    public void SwitchToLED()
+    {
+        GameEvents.current.SwitchLightbulb(0);
+        if (lamp.intensity == lightOffValue) { }
+        else
+        {
+            GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, -energy);
+            UIProgressBar.Instance.ChangeAmount(-energy);
+            UIProgressBar.Instance.AddToMax(-energy);
+        }
+        energy = Mathf.CeilToInt(energy * energyMultiplyerLED);
+        lamp.color = LEDColor; if (lamp.intensity == lightOffValue) { }
+        else
+        {
+            GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, energy);
+            UIProgressBar.Instance.ChangeAmount(energy);
+            UIProgressBar.Instance.AddToMax(energy);
         }
     }
 

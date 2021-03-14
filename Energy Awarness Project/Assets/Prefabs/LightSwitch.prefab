@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5415836086435882814}
   - component: {fileID: 1888859530}
   - component: {fileID: 1888859534}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LightSwitch
   m_TagString: Interactive
   m_Icon: {fileID: 0}
@@ -110,7 +110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  power: 50
 --- !u!114 &1888859534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +134,7 @@ GameObject:
   - component: {fileID: 5415836086484358330}
   - component: {fileID: 5415836086484358335}
   - component: {fileID: 5415836086484358332}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LightBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5415836086650974846}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LightSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,6 +247,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5415836086650974846}
     m_Modifications:
+    - target: {fileID: 5339219607189413274, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5835560478008614208, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
         type: 3}
       propertyPath: m_RootOrder
@@ -307,6 +311,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lightbulb1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835560478008705376, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835560478682820159, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763623862472909180, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b42744a8d216ce4e9dd43d4d0b7534e, type: 3}
@@ -413,6 +432,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerArea
       objectReference: {fileID: 0}
+    - target: {fileID: 8458514299554081132, guid: be544b7b9c115db41bcce1c455e71721,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be544b7b9c115db41bcce1c455e71721, type: 3}
 --- !u!4 &8173384492188086991 stripped
@@ -428,6 +452,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5415836086650974846}
     m_Modifications:
+    - target: {fileID: 5339219607189413274, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5835560478008614208, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
         type: 3}
       propertyPath: m_RootOrder
@@ -488,6 +517,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lightbulb1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5835560478008705376, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835560478682820159, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763623862472909180, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b42744a8d216ce4e9dd43d4d0b7534e, type: 3}
 --- !u!4 &2116488896240607435 stripped
@@ -503,6 +547,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5415836086650974846}
     m_Modifications:
+    - target: {fileID: 5339219607189413274, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5835560478008614208, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
         type: 3}
       propertyPath: m_RootOrder
@@ -562,6 +611,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lightbulb1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835560478008705376, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5835560478682820159, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6763623862472909180, guid: 6b42744a8d216ce4e9dd43d4d0b7534e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b42744a8d216ce4e9dd43d4d0b7534e, type: 3}

@@ -19,6 +19,7 @@ public class GoalManager : MonoBehaviour
 
     [Header("Miscellaneous")]
     public int roomTemp = 25;
+    public Light goalUnlockLight;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class GoalManager : MonoBehaviour
     private void OnEnable()
     {
         SetGoals();
+        goalUnlockLight.color = Color.red;
     }
 
     public bool CheckIfGoalAchieved(int goalNum)
@@ -120,16 +122,24 @@ public class GoalManager : MonoBehaviour
     }
     void RefreshGoalList()
     {
+        int goalsMet = 0;
         for (int i = 0; i < goals.goals.Count; i++)
         {
             if (CheckIfGoalAchieved(i))
             {
                 GoalTextArea.GetChild(i).gameObject.GetComponent<TMP_Text>().color = completeGoalColor;
+                goalsMet++;
             }
             else
             {
                 GoalTextArea.GetChild(i).gameObject.GetComponent<TMP_Text>().color = incompleteGoalColor;
             }
+        }
+        if (goalsMet == goals.goals.Count)
+        {//When goals are met the light turns green (on the door or where-ever)
+            goalUnlockLight.color = Color.green;
+            //This calls the unlock door event. Currently has a number should we decide to use id or which door to unlock
+            GameEvents.current.UnlockDoor(0);
         }
     }
     
@@ -145,7 +155,7 @@ public class GoalManager : MonoBehaviour
             text.text = GetGoalString(i);
             text.fontSize = 0.2f;
             goals.goals[i].ResetCurrent();
-            if (goals.goals[i].type == Goal.goalType.TempAlter) { ChangeCurrentGoalNum(i, roomTemp); }
+            //if (goals.goals[i].type == Goal.goalType.TempAlter) { ChangeCurrentGoalNum(i, roomTemp); }
         }
         RefreshGoalList();
     }

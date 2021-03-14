@@ -6,38 +6,26 @@ public class PlayerInteract : MonoBehaviour
 {
     //Raycast. Attach to camera and will point where the player is looking
     RaycastHit hit;
-    Vector3 fwd;
-    public LayerMask ignore;
+    Ray ray;
+    public int layerMask;
 
     private void Awake()
     {//Direction of raycast
-        fwd = transform.TransformDirection(transform.forward);
+        layerMask = 1 << layerMask;
     }
     void Update()
     {
-        fwd = transform.TransformDirection(transform.forward);
-        if (Physics.SphereCast(transform.position, 1, transform.forward, out hit, 10))
-        {
-            if (hit.collider.tag == "Interactive")
+        ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        if (Physics.Raycast(ray,out hit,5, layerMask))
+        {//Trying this again. It might work?
+            Debug.DrawRay(Camera.main.transform.position, hit.point - Camera.main.transform.position);
+            if (Input.GetMouseButtonDown(0))
             {
-                Debug.DrawRay(transform.position + transform.forward, fwd);
-                if (hit.transform.gameObject.GetComponent<ObjectHighlight>())
+                if (hit.transform.GetComponent<iInteract>() != null)
                 {
-                    hit.transform.gameObject.GetComponent<ObjectHighlight>().Highlight();
+                    hit.transform.GetComponent<iInteract>().Interact();
                 }
-                /*
-                if (Input.GetButtonDown("Fire1")) {
-                    //This might not work. ??
-                    iInteract interact = hit.transform.gameObject.GetComponentInChildren<iInteract>();
-                    if (interact != null)
-                    {
-                        interact.Interact();
-                    } 
-
-                }*/
             }
-            
-
         }
     }
 }

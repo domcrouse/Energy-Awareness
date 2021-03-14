@@ -7,7 +7,7 @@ public class ChangeBulb : MonoBehaviour, iInteract
     public bool needsChanging;
     public bool isLED;
     Light bulb;
-    public float flickerFrequency;
+    float flickerFrequency;
     float prevIntensity;
     public float flickerIntensity;
 
@@ -17,18 +17,19 @@ public class ChangeBulb : MonoBehaviour, iInteract
         if (needsChanging)
         {
             prevIntensity = bulb.intensity;
-            Invoke("Flicker",0);
+            StartCoroutine("Flicker");
         }
     }
 
     public void Interact()
     {
         if (needsChanging) { needsChanging = false; StopCoroutine("Flicker"); }
-        if (!isLED) { isLED = true; }
+        if (!isLED) { isLED = true; GetComponent<LightController>().SwitchToLED();}
     }
 
     IEnumerator Flicker()
     {
+        flickerFrequency = Random.Range(0.1f, 2);
         yield return new WaitForSeconds(flickerFrequency);
         if(bulb.intensity == flickerIntensity)
         {
@@ -38,6 +39,7 @@ public class ChangeBulb : MonoBehaviour, iInteract
         {
             bulb.intensity = flickerIntensity;
         }
-        Invoke("Flicker",0);
+        StartCoroutine("Flicker");
     }
+
 }
