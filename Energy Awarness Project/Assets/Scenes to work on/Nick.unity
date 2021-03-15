@@ -958,7 +958,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1029951050, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: energy
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: LEDColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: LEDColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: LEDColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: LEDColor.r
+      value: 0.9386792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: lightOffValue
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: standardColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: standardColor.b
+      value: 0.8066038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: standardColor.g
+      value: 0.9709906
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: standardColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029951053, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}
+      propertyPath: energyMultiplyerLED
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2562333304779717690, guid: a207ee2186aad42499bf41afe02d5ac5,
         type: 3}
@@ -1023,32 +1067,32 @@ PrefabInstance:
     - target: {fileID: 2562333304779718085, guid: a207ee2186aad42499bf41afe02d5ac5,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2562333305652926454, guid: a207ee2186aad42499bf41afe02d5ac5,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2562333305675830530, guid: a207ee2186aad42499bf41afe02d5ac5,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2562333305846322918, guid: a207ee2186aad42499bf41afe02d5ac5,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2562333306232339082, guid: a207ee2186aad42499bf41afe02d5ac5,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6263822499825321648, guid: a207ee2186aad42499bf41afe02d5ac5,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a207ee2186aad42499bf41afe02d5ac5, type: 3}

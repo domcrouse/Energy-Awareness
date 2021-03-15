@@ -8,7 +8,7 @@ public class UIPosters : MonoBehaviour
 {
     int posters = 0;
     TMP_Text text;
-    private void OnEnable()
+    private void Start()
     {
         GameEvents.current.onPickUpPoster += AddPoster;
         GameEvents.current.onDeliverPoster += Delivery;

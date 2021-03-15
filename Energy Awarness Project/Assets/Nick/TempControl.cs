@@ -29,6 +29,7 @@ public class TempControl : MonoBehaviour
         {
             temp += amount;
             if (temp < zeroEnergyPoint) { amount *= -1; }
+            if (temp == zeroEnergyPoint && amount > 0) { amount *= -1; }
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.TempAlter, amount);
             UpdateTemp();
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, Energy(amount));
