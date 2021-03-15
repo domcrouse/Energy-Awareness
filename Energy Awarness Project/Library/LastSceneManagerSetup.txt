@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes to work on/DImi.unity
-=======
 - path: Assets/Scenes to work on/Main Menu.unity
->>>>>>> 2971d2a2a1247efce64f054674017c4f5eb235dd
   isLoaded: 1
   isActive: 1
   isSubScene: 0
