@@ -22,7 +22,7 @@ public class TestJson : MonoBehaviour
     public Text questionTxtBox;
     public Text answerTxtBox1;
     public Text answerTxtBox2;
-    public Text answerTxtBox3;
+    int Qnum = 0;
 
     IEnumerator GetRequest(string uri)
     {
@@ -42,11 +42,27 @@ public class TestJson : MonoBehaviour
                 Debug.Log(pages[page] + "text of page is" + webRequest.downloadHandler.text);
                 textToParse = webRequest.downloadHandler.text;
                 questions = JsonUtility.FromJson<Questions>(textToParse);
-                questionTxtBox.text = questions.questions[0];
-                answerTxtBox1.text = questions.answers[0];
-                answerTxtBox2.text = questions.answers[1];
-                answerTxtBox3.text = questions.answers[2];
+                question();
             }
         }
+    }
+    public void question()
+    {
+        if (Qnum>questions.questions.Length-1)
+        {
+            return;
+        }
+        questionTxtBox.text = questions.questions[Qnum];
+        answerTxtBox1.text = questions.answers[(Qnum*2)];
+        answerTxtBox2.text = questions.answers[(Qnum*2)+1];
+        Qnum++;
+    }
+    public void CorrectAnswer()
+    {
+
+    }
+    public void WrongAnswer()
+    {
+
     }
 }
