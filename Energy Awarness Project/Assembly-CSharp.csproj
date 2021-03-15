@@ -60,11 +60,15 @@
     <Compile Include="Assets\Nick\OldScripts\InteractionScript.cs" />
     <Compile Include="Assets\Liam\Movement.cs" />
     <Compile Include="Assets\Nick\PlayerInteract.cs" />
+    <Compile Include="Assets\Nick\UIPosters.cs" />
     <Compile Include="Assets\Nick\ChangeBulb.cs" />
+    <Compile Include="Assets\Nick\ChangeTemp.cs" />
     <Compile Include="Assets\Nick\TriggerAreaScript.cs" />
+    <Compile Include="Assets\Nick\PickupPoster.cs" />
     <Compile Include="Assets\Nick\RoomGoalsScriptable.cs" />
     <Compile Include="Assets\Nick\OldScripts\MenuOptions.cs" />
     <Compile Include="Assets\Nick\UIProgressBar.cs" />
+    <Compile Include="Assets\Nick\DeliverPoster.cs" />
     <Compile Include="Assets\Nick\DemoFiles\TriggerScript.cs" />
     <Compile Include="Assets\Nick\DemoFiles\PlayerScript.cs" />
     <Compile Include="Assets\Nick\LightController.cs" />
@@ -72,6 +76,7 @@
     <Compile Include="Assets\Dimi\Scripts\MouseHandler.cs" />
     <Compile Include="Assets\Nick\DemoFiles\ButtonScript.cs" />
     <Compile Include="Assets\Nick\GoalManager.cs" />
+    <Compile Include="Assets\Nick\TempControl.cs" />
     <Compile Include="Assets\Nick\DemoFiles\ZoomSlider.cs" />
     <Compile Include="Assets\Nick\iInteract.cs" />
     <Compile Include="Assets\Nick\LightSwitch.cs" />
@@ -81,11 +86,6 @@
     <Compile Include="Assets\Dimi\Scripts\MovementController.cs" />
     <Compile Include="Assets\Liam\TestJson.cs" />
     <Compile Include="Assets\Nick\DemoFiles\InteractiveOptions.cs" />
-    <Compile Include="Assets\Nick\PickupPoster.cs" />
-    <Compile Include="Assets\Nick\DeliverPoster.cs" />
-    <Compile Include="Assets\Nick\UIPosters.cs" />
-    <Compile Include="Assets\Nick\ChangeTemp.cs" />
-    <Compile Include="Assets\Nick\TempControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -229,7 +229,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.88078177, b: 0.6273585, a: 1}
   m_Intensity: 7.92
-  m_Range: 9.655952
+  m_Range: 8.619364
   m_SpotAngle: 116.714905
   m_InnerSpotAngle: 38.54486
   m_CookieSize: 10
@@ -270,7 +270,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 34.5
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -310,7 +310,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needsChanging: 0
   isLED: 0
-  flickerFrequency: 1.5
   flickerIntensity: 0.5
 --- !u!1001 &2936230279652968464
 PrefabInstance:
@@ -382,12 +381,12 @@ PrefabInstance:
     - target: {fileID: 5131840336320140507, guid: be544b7b9c115db41bcce1c455e71721,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.26005143
+      value: 0.26005137
       objectReference: {fileID: 0}
     - target: {fileID: 5131840336320140507, guid: be544b7b9c115db41bcce1c455e71721,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.21404824
+      value: 0.18508403
       objectReference: {fileID: 0}
     - target: {fileID: 5131840336320140507, guid: be544b7b9c115db41bcce1c455e71721,
         type: 3}
@@ -397,12 +396,12 @@ PrefabInstance:
     - target: {fileID: 5131840336320140507, guid: be544b7b9c115db41bcce1c455e71721,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.008205748
+      value: -0.008205747
       objectReference: {fileID: 0}
     - target: {fileID: 5131840336320140507, guid: be544b7b9c115db41bcce1c455e71721,
         type: 3}
       propertyPath: m_Center.z
-      value: -0.017975323
+      value: 0.06788932
       objectReference: {fileID: 0}
     - target: {fileID: 8458514299554081132, guid: be544b7b9c115db41bcce1c455e71721,
         type: 3}
