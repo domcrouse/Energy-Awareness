@@ -10,6 +10,8 @@ public class ChangeBulb : MonoBehaviour, iInteract
     float flickerFrequency;
     float prevIntensity;
     public float flickerIntensity;
+    public GameObject tip;
+    public string tipText;
 
     private void Awake()
     {
@@ -19,12 +21,13 @@ public class ChangeBulb : MonoBehaviour, iInteract
             prevIntensity = bulb.intensity;
             StartCoroutine("Flicker");
         }
+        tip.GetComponentInChildren<TMPro.TMP_Text>().text = tipText;
     }
 
     public void Interact()
     {
         if (needsChanging) { needsChanging = false; StopCoroutine("Flicker"); }
-        if (!isLED) { isLED = true; GetComponent<LightController>().SwitchToLED();}
+        if (!isLED) { isLED = true; GetComponent<LightController>().SwitchToLED(); tip.SetActive(false); }
     }
 
     IEnumerator Flicker()

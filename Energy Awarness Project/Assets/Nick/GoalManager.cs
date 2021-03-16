@@ -13,13 +13,15 @@ public class GoalManager : MonoBehaviour
     public Transform GoalTextArea;
     public Color completeGoalColor;
     public Color incompleteGoalColor;
+    public TMP_FontAsset font;
 
     [Header("Score Attributes")]
     public int totalScore;
 
     [Header("Miscellaneous")]
     public int roomTemp = 25;
-    public Light goalUnlockLight;
+    public GameObject RedSign;
+    public GameObject GreenSign;
 
     private void Awake()
     {
@@ -28,7 +30,7 @@ public class GoalManager : MonoBehaviour
     private void OnEnable()
     {
         SetGoals();
-        goalUnlockLight.color = Color.red;
+        GreenSign.SetActive(false);
     }
 
     public bool CheckIfGoalAchieved(int goalNum)
@@ -137,7 +139,8 @@ public class GoalManager : MonoBehaviour
         }
         if (goalsMet == goals.goals.Count)
         {//When goals are met the light turns green (on the door or where-ever)
-            goalUnlockLight.color = Color.green;
+            RedSign.SetActive(false);
+            GreenSign.SetActive(true);
             //This calls the unlock door event. Currently has a number should we decide to use id or which door to unlock
             GameEvents.current.UnlockDoor(0);
         }
@@ -145,6 +148,7 @@ public class GoalManager : MonoBehaviour
     
     void SetGoals()
     {
+        Debug.Log(goals.goals.Count);
         for (int i = 0; i < goals.goals.Count; i++)
         {//Make new textmesh pros and writes the goals with target numbers
             GameObject goal = new GameObject("GoalText");
@@ -153,7 +157,8 @@ public class GoalManager : MonoBehaviour
             goal.transform.localPosition = Vector3.zero;
             TMP_Text text = goal.AddComponent<TextMeshProUGUI>();
             text.text = GetGoalString(i);
-            text.fontSize = 0.2f;
+            text.font = font;
+            text.fontSize = 0.12f;
             goals.goals[i].ResetCurrent();
             //if (goals.goals[i].type == Goal.goalType.TempAlter) { ChangeCurrentGoalNum(i, roomTemp); }
         }
