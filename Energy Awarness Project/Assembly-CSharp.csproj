@@ -68,6 +68,8 @@
     <Compile Include="Assets\Nick\PickupPoster.cs" />
     <Compile Include="Assets\Nick\RoomGoalsScriptable.cs" />
     <Compile Include="Assets\Nick\OldScripts\MenuOptions.cs" />
+    <Compile Include="Assets\Nick\FacePlayer.cs" />
+    <Compile Include="Assets\Nick\CameraParallax.cs" />
     <Compile Include="Assets\Nick\UIProgressBar.cs" />
     <Compile Include="Assets\Nick\DeliverPoster.cs" />
     <Compile Include="Assets\Nick\DemoFiles\TriggerScript.cs" />
@@ -87,8 +89,7 @@
     <Compile Include="Assets\Dimi\Scripts\MovementController.cs" />
     <Compile Include="Assets\Liam\TestJson.cs" />
     <Compile Include="Assets\Nick\DemoFiles\InteractiveOptions.cs" />
-    <Compile Include="Assets\Nick\CameraParallax.cs" />
-    <Compile Include="Assets\Nick\FacePlayer.cs" />
+    <Compile Include="Assets\Nick\SoundManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
