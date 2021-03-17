@@ -95,4 +95,20 @@ public class GameEvents : MonoBehaviour
             onChangeTemp(amount);
         }
     }
+    public event Action onCorrectAnswer;
+    public void CorrectAnswer()
+    {
+        if (onCorrectAnswer != null)
+        {
+            onCorrectAnswer();
+        }
+    }
+    public event Action onIncorrectAnswer;
+    public void IncorrectAnswer()
+    {
+        if (onIncorrectAnswer != null)
+        {
+            onIncorrectAnswer();
+        }
+    }
 }

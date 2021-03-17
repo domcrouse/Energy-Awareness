@@ -6,9 +6,12 @@ public class LightSwitch : MonoBehaviour, iInteract
 {
     public int id;
     bool isOn = true;
+    public GameObject tip;
+    public string tipText;
 
     private void Start()
     {
+        tip.GetComponentInChildren<TMPro.TMP_Text>().text = tipText;
     }
     public void Interact()
     {

@@ -11,6 +11,9 @@ public class TempControl : MonoBehaviour
     public int temp = 25;
     public int maxTemp = 40;
     public int minTemp = -20;
+
+    public GameObject tip;
+    public string tipText;
     private void Start()
     {
         GameEvents.current.onChangeTemp += ChangeTemp;
@@ -18,6 +21,7 @@ public class TempControl : MonoBehaviour
         GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.TempAlter, temp);
         UIProgressBar.Instance.ChangeAmount(Energy(temp));
         UIProgressBar.Instance.AddToMax(Energy(maxTemp));
+        tip.GetComponentInChildren<TMP_Text>().text = tipText;
     }
     private void OnDisable()
     {
@@ -25,7 +29,7 @@ public class TempControl : MonoBehaviour
     }
     void ChangeTemp(int amount)
     {
-        if (temp < maxTemp && temp > minTemp)
+        if ((temp < maxTemp && amount>0)|| (temp > minTemp && amount <0))
         {
             temp += amount;
             if (temp < zeroEnergyPoint) { amount *= -1; }
