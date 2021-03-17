@@ -13,7 +13,8 @@ public class FacePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float num = transform.eulerAngles.x;
         transform.LookAt(cam);
-        transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        transform.eulerAngles = new Vector3(num, transform.eulerAngles.y, transform.eulerAngles.z);
     }
 }
