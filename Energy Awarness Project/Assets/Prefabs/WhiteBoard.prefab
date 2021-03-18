@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2078788980}
   - component: {fileID: 2078788982}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: GoalArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -131,7 +131,7 @@ RectTransform:
   m_GameObject: {fileID: 4970325291052511589}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -10.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_Children:
   - {fileID: 4970325292139393588}
   m_Father: {fileID: 0}
@@ -218,8 +218,11 @@ MonoBehaviour:
   GoalTextArea: {fileID: 2078788979}
   completeGoalColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   incompleteGoalColor: {r: 0, g: 0, b: 0, a: 1}
+  font: {fileID: 0}
   totalScore: 0
   roomTemp: 25
+  RedSign: {fileID: 0}
+  GreenSign: {fileID: 0}
 --- !u!1 &4970325292139393589
 GameObject:
   m_ObjectHideFlags: 0

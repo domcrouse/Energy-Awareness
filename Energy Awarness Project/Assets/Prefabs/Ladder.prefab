@@ -420,9 +420,10 @@ GameObject:
   - component: {fileID: 7743003569574279115}
   - component: {fileID: 7743003569574279112}
   - component: {fileID: 7743003569574279114}
+  - component: {fileID: 1780059185}
   m_Layer: 0
   m_Name: Ladder
-  m_TagString: Untagged
+  m_TagString: Moveable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,8 +475,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2335494, y: 4.183771, z: 1.5103064}
-  m_Center: {x: 0.009132981, y: 2.1011944, z: -0.25515318}
+  m_Size: {x: 1.2335494, y: 2.973844, z: 1.5103064}
+  m_Center: {x: 0.009132981, y: 1.4962308, z: -0.25515318}
 --- !u!65 &7743003569574279114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -489,6 +490,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.6832218, z: 0.64488125}
   m_Center: {x: 0, y: 1.8764906, z: 0.85794115}
+--- !u!54 &1780059185
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7743003569574279113}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &8658119543930557870
 GameObject:
   m_ObjectHideFlags: 0
