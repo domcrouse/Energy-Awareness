@@ -19,7 +19,6 @@ public class GoalManager : MonoBehaviour
     public int totalScore;
 
     [Header("Miscellaneous")]
-    public int roomTemp = 25;
     public GameObject RedSign;
     public GameObject GreenSign;
 
@@ -31,6 +30,10 @@ public class GoalManager : MonoBehaviour
     {
         SetGoals();
         GreenSign.SetActive(false);
+        LightController.score = 0;
+        DeliverPoster.score = 0;
+        ChangeBulb.score = 0;
+        TempControl.score = 0;
     }
 
     public bool CheckIfGoalAchieved(int goalNum)
@@ -160,7 +163,6 @@ public class GoalManager : MonoBehaviour
             text.font = font;
             text.fontSize = 0.12f;
             goals.goals[i].ResetCurrent();
-            //if (goals.goals[i].type == Goal.goalType.TempAlter) { ChangeCurrentGoalNum(i, roomTemp); }
         }
         RefreshGoalList();
     }

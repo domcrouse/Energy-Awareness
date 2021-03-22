@@ -87,10 +87,14 @@
     <Compile Include="Assets\Nick\ObjectHighlight.cs" />
     <Compile Include="Assets\Nick\DemoFiles\CameraControl.cs" />
     <Compile Include="Assets\Liam\Questions.cs" />
+    <Compile Include="Assets\Dimi\Scripts\LadderInteract.cs" />
     <Compile Include="Assets\Dimi\Scripts\MovementController.cs" />
     <Compile Include="Assets\Liam\TestJson.cs" />
     <Compile Include="Assets\Nick\DemoFiles\InteractiveOptions.cs" />
-    <Compile Include="Assets\Dimi\Scripts\LadderInteract.cs" />
+    <Compile Include="Assets\Nick\ScoreCard.cs" />
+    <Compile Include="Assets\Nick\RotateSlowly.cs" />
+    <Compile Include="Assets\Nick\SwapAtRandom.cs" />
+    <Compile Include="Assets\Nick\LeaveRoom.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

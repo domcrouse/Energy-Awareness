@@ -7,6 +7,7 @@ public class DeliverPoster : MonoBehaviour, iInteract
     int posterNum = 0;
     public GameObject tip;
     public string tipText;
+    public static int score;
     private void Start()
     {
         GameEvents.current.onPickUpPoster += AddPoster;
@@ -24,6 +25,7 @@ public class DeliverPoster : MonoBehaviour, iInteract
     public void Interact()
     {
         GameEvents.current.DeliverPoster(posterNum);
+        score += (posterNum * 5);
         posterNum = 0;
     }
 

@@ -95,6 +95,14 @@ public class GameEvents : MonoBehaviour
             onChangeTemp(amount);
         }
     }
+    public event Action onLeaveRoom;
+    public void LeaveRoom()
+    {
+        if (onLeaveRoom != null)
+        {
+            onLeaveRoom();
+        }
+    }
     public event Action onCorrectAnswer;
     public void CorrectAnswer()
     {

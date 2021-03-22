@@ -12,6 +12,7 @@ public class ChangeBulb : MonoBehaviour, iInteract
     public float flickerIntensity;
     public GameObject tip;
     public string tipText;
+    public static int score;
 
     private void Awake()
     {
@@ -26,8 +27,8 @@ public class ChangeBulb : MonoBehaviour, iInteract
 
     public void Interact()
     {
-        if (needsChanging) { needsChanging = false; StopCoroutine("Flicker"); }
-        if (!isLED) { isLED = true; GetComponent<LightController>().SwitchToLED(); tip.SetActive(false); }
+        if (needsChanging) { needsChanging = false; StopCoroutine("Flicker"); score += 5; }
+        if (!isLED) { isLED = true; GetComponent<LightController>().SwitchToLED(); tip.SetActive(false); score += 5; }
     }
 
     IEnumerator Flicker()

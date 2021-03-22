@@ -21,6 +21,7 @@ public class TriggerAreaScript : MonoBehaviour
                 {
                     interact.Interact();
                 }
+                else { Debug.Log("No Interact found"); }
             }
         }
     }

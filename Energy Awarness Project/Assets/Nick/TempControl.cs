@@ -14,6 +14,7 @@ public class TempControl : MonoBehaviour
 
     public GameObject tip;
     public string tipText;
+    public static int score;
     private void Start()
     {
         GameEvents.current.onChangeTemp += ChangeTemp;
@@ -38,6 +39,7 @@ public class TempControl : MonoBehaviour
             UpdateTemp();
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, Energy(amount));
             UIProgressBar.Instance.ChangeAmount(Energy(amount));
+            score -= amount * 5;
         }
         else
         {
