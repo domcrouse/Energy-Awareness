@@ -21,6 +21,7 @@ public class ScoreCard : MonoBehaviour
 
     [Header("Buttons")]
     public GameObject leaveButton;
+    public GameObject highscoreButton;
 
     MovementController player1;
     MouseHandler player2;
@@ -60,6 +61,11 @@ public class ScoreCard : MonoBehaviour
         StartCoroutine("ShowScoreNumber");
     }
 
+    public int GetFinalScore()
+    {
+        return (LightController.score + DeliverPoster.score + ChangeBulb.score + TempControl.score + GoalManager.current.totalScore + score);
+    }
+
     IEnumerator ShowScoreNumber()
     {
         yield return new WaitForSecondsRealtime(numberFreq);
@@ -92,7 +98,7 @@ public class ScoreCard : MonoBehaviour
                 break;
             case scoreType.Final:
                 totalScore.text = counter.ToString("n0");
-                if(counter== (LightController.score+ DeliverPoster.score+ ChangeBulb.score+ TempControl.score+ GoalManager.current.totalScore + score)) { leaveButton.SetActive(true);StopCoroutine("ShowScoreNumber"); yield break; }
+                if(counter== (LightController.score+ DeliverPoster.score+ ChangeBulb.score+ TempControl.score+ GoalManager.current.totalScore + score)) { leaveButton.SetActive(true); highscoreButton.SetActive(true); StopCoroutine("ShowScoreNumber"); yield break; }
                 break;
         }
         StartCoroutine("ShowScoreNumber");
