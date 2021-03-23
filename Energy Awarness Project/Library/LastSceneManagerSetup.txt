@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes to work on/OfficeNick.unity
+- path: Assets/Scenes to work on/Main Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
