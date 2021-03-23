@@ -15,8 +15,7 @@ public class HighScores : MonoBehaviour
     public TMP_InputField inputField;
     public static HighScores current;
 
-    public enum highScoreState { none, waiting, done}
-    highScoreState state = highScoreState.none;
+    bool gotScores = false;
 
     private void Awake()
     {
@@ -25,14 +24,10 @@ public class HighScores : MonoBehaviour
 
     private void Update()
     {
-        switch (state)
+        if (gotScores)
         {
-            case highScoreState.none: break;
-            case highScoreState.waiting: 
-                highscoreDisplayTxt.text = "loading...";
-                if (highscoresList.Length > 0) { DisplayHighScores();state = highScoreState.done; }
-                break;
-            case highScoreState.done: break;
+            if (highscoresList == null) { highscoreDisplayTxt.text = "loading..."; }
+            else { gotScores = false; }
         }
     }
 
@@ -42,12 +37,14 @@ public class HighScores : MonoBehaviour
     }
     IEnumerator UploadNewHighscore(string username,int score)
     {
-        UnityWebRequest www = new UnityWebRequest(webURL + privateCode + "/add/" + UnityWebRequest.EscapeURL(username) + "/" + score);
-        yield return www;
+        UnityWebRequest www = UnityWebRequest.Get(webURL + privateCode + "/add/" + UnityWebRequest.EscapeURL(username) + "/" + score);
+        yield return www.SendWebRequest();
 
         if (string.IsNullOrEmpty(www.error))
         {
-            Debug.Log("UploadSuccessful");
+            gotScores = true;
+            Debug.Log(www.result);
+            DownloadHighscores();
         }
         else { Debug.Log("Error uploading: " + www.error); }
     }
@@ -57,8 +54,8 @@ public class HighScores : MonoBehaviour
     }
     IEnumerator DownloadHighscoresFromDatabase()
     {
-        UnityWebRequest www = new UnityWebRequest(webURL + publicCode + "/pipe/");
-        yield return www;
+        UnityWebRequest www = UnityWebRequest.Get(webURL + publicCode + "/pipe/");
+        yield return www.SendWebRequest();
 
         if (string.IsNullOrEmpty(www.error))
         {
@@ -78,12 +75,11 @@ public class HighScores : MonoBehaviour
     public void SubmitScore()
     {
         AddNewHighscore(inputField.text, ScoreCard.current.GetFinalScore());
-        DownloadHighscores();
-        state = highScoreState.waiting;
     }
 
     void FormatHighscores(string textStream)
     {
+        Debug.Log(textStream);
         string[] entries = textStream.Split(new char[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
         highscoresList = new Highscore[entries.Length];
         for (int i = 0; i < entries.Length; i++)
@@ -93,6 +89,7 @@ public class HighScores : MonoBehaviour
             int score = int.Parse(entryInfo[1]);
             highscoresList[i] = new Highscore(username, score);
         }
+        DisplayHighScores();
     }
 }
 
