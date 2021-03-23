@@ -18,9 +18,9 @@ public class TempControl : MonoBehaviour
     private void Start()
     {
         GameEvents.current.onChangeTemp += ChangeTemp;
-        GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, Energy(temp));
+        GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, Energy(temp-zeroEnergyPoint));
         GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.TempAlter, temp);
-        UIProgressBar.Instance.ChangeAmount(Energy(temp));
+        UIProgressBar.Instance.ChangeAmount(Energy(temp-zeroEnergyPoint));
         UIProgressBar.Instance.AddToMax(Energy(maxTemp));
         tip.GetComponentInChildren<TMP_Text>().text = tipText;
     }
@@ -39,7 +39,7 @@ public class TempControl : MonoBehaviour
             UpdateTemp();
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, Energy(amount));
             UIProgressBar.Instance.ChangeAmount(Energy(amount));
-            score -= amount * 5;
+            score -= amount * TimeLimit.current.TimeModifiedScore(5);
         }
         else
         {

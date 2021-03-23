@@ -38,12 +38,13 @@ public class GoalManager : MonoBehaviour
 
     public bool CheckIfGoalAchieved(int goalNum)
     {
+        if (Time.time < 1) { return false; }
         //Check goal current against goal target
         switch (goals.goals[goalNum].type)
         {
             case Goal.goalType.LightsOff:
                 if (goals.goals[goalNum].GetCurrentNum() >= goals.goals[goalNum].targetNumber)
-                { 
+                {
                     totalScore += goals.goals[goalNum].AwardScore();
                     return true;
                 }
@@ -162,6 +163,7 @@ public class GoalManager : MonoBehaviour
             text.text = GetGoalString(i);
             text.font = font;
             text.fontSize = 0.12f;
+            goals.goals[i].SetAchievedToFalse();
             goals.goals[i].ResetCurrent();
         }
         RefreshGoalList();

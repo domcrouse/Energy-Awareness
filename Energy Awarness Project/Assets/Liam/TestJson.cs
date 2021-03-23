@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using TMPro;
 
 public class TestJson : MonoBehaviour
 {
@@ -19,9 +20,9 @@ public class TestJson : MonoBehaviour
     }
     public string textToParse;
     Questions questions;
-    public Text questionTxtBox;
-    public Text answerTxtBox1;
-    public Text answerTxtBox2;
+    public TMP_Text questionTxtBox;
+    public TMP_Text answerTxtBox1;
+    public TMP_Text answerTxtBox2;
     int Qnum = 0;
 
     IEnumerator GetRequest(string uri)
@@ -50,6 +51,7 @@ public class TestJson : MonoBehaviour
     {
         if (Qnum>questions.questions.Length-1)
         {
+            ScoreCard.current.ShowScore();
             return;
         }
         questionTxtBox.text = questions.questions[Qnum];
@@ -59,10 +61,10 @@ public class TestJson : MonoBehaviour
     }
     public void CorrectAnswer()
     {
-
+        GameEvents.current.CorrectAnswer();
     }
     public void WrongAnswer()
     {
-
+        GameEvents.current.IncorrectAnswer();
     }
 }

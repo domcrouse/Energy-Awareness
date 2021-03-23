@@ -36,7 +36,7 @@ public class LightController : MonoBehaviour
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.LightsOff, -1);
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, energy);
             UIProgressBar.Instance.ChangeAmount(energy);
-            score -= 5;
+            score -= TimeLimit.current.TimeModifiedScore(5);
         }
     }
     void OnLightOff(int id)
@@ -47,7 +47,7 @@ public class LightController : MonoBehaviour
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.LightsOff, 1);
             GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.EnergyLevel, -energy);
             UIProgressBar.Instance.ChangeAmount(-energy);
-            score += 5;
+            score += TimeLimit.current.TimeModifiedScore(5);
         }
     }
 

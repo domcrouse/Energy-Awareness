@@ -27,8 +27,10 @@ public class ChangeBulb : MonoBehaviour, iInteract
 
     public void Interact()
     {
-        if (needsChanging) { needsChanging = false; StopCoroutine("Flicker"); score += 5; }
-        if (!isLED) { isLED = true; GetComponent<LightController>().SwitchToLED(); tip.SetActive(false); score += 5; }
+        if (needsChanging) 
+        { needsChanging = false; StopCoroutine("Flicker"); score += TimeLimit.current.TimeModifiedScore(5); GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.LightsChange,1); }
+        if (!isLED) 
+        { isLED = true; GetComponent<LightController>().SwitchToLED(); tip.SetActive(false); score += TimeLimit.current.TimeModifiedScore(5); GoalManager.current.ChangeCurrentGoalNum(Goal.goalType.LightsChange, 1); }
     }
 
     IEnumerator Flicker()

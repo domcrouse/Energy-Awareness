@@ -16,7 +16,7 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-        if (Physics.Raycast(ray,out hit,5, layerMask))
+        if (Physics.Raycast(ray,out hit,3, layerMask))
         {//Trying this again. It might work?
             Debug.DrawRay(Camera.main.transform.position, hit.point - Camera.main.transform.position);
             if (Input.GetMouseButtonDown(0))

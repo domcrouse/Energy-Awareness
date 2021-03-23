@@ -5,6 +5,7 @@ using UnityEngine;
 public class LeaveRoom : MonoBehaviour, iInteract
 {
     bool canLeave = false;
+    public GameObject outLine;
     public void Interact()
     {
         if (canLeave)
@@ -13,7 +14,7 @@ public class LeaveRoom : MonoBehaviour, iInteract
         }
     }
 
-    void CanLeave(int id) { canLeave = true; }
+    void CanLeave(int id) { canLeave = true; outLine.SetActive(true); }
 
     private void Start()
     {

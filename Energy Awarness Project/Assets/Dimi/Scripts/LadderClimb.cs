@@ -9,7 +9,10 @@ public class LadderClimb : MonoBehaviour
     public float speed = 1;
 
 
-
+    private void Awake()
+    {
+        playerObject = FindObjectOfType<MovementController>();
+    }
 
     void OnTriggerEnter(Collider col)
     {
