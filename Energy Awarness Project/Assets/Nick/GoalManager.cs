@@ -141,7 +141,7 @@ public class GoalManager : MonoBehaviour
                 GoalTextArea.GetChild(i).gameObject.GetComponent<TMP_Text>().color = incompleteGoalColor;
             }
         }
-        if (goalsMet == goals.goals.Count)
+        if (goalsMet == goals.goals.Count && RedSign.activeSelf)
         {//When goals are met the light turns green (on the door or where-ever)
             RedSign.SetActive(false);
             GreenSign.SetActive(true);

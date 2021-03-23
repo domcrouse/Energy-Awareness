@@ -26,6 +26,7 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         GameEvents.current.onTurnLightOn += SFXSwitch;
+        GameEvents.current.onTurnLightOff += SFXSwitch;
         GameEvents.current.onDeliverPoster += SFXDeliver;
         GameEvents.current.onChangeTemp += SFXThermo;
         GameEvents.current.onCorrectAnswer += SFXRight;
@@ -35,6 +36,7 @@ public class SoundManager : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.current.onTurnLightOn -= SFXSwitch;
+        GameEvents.current.onTurnLightOff -= SFXSwitch;
         GameEvents.current.onDeliverPoster -= SFXDeliver;
         GameEvents.current.onChangeTemp -= SFXThermo;
         GameEvents.current.onCorrectAnswer -= SFXRight;
@@ -63,6 +65,6 @@ public class SoundManager : MonoBehaviour
     void SFXDeliver(int id) { source.PlayOneShot(deliverPoster, 0.8f); }
     void SFXThermo(int id) { source.PlayOneShot(thermostat, 0.6f); }
     void SFXRight() { source.PlayOneShot(rightAnswer, 0.9f); }
-    void SFXWrong() { source.PlayOneShot(wrongAnswer, 0.9f); }
+    void SFXWrong() { source.PlayOneShot(wrongAnswer, 0.2f); }
     void SFXDoor(int id) { source.PlayOneShot(unlockDoor, 1); }
 }

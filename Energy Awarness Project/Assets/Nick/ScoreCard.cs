@@ -63,7 +63,7 @@ public class ScoreCard : MonoBehaviour
 
     public int GetFinalScore()
     {
-        return (LightController.score + DeliverPoster.score + ChangeBulb.score + TempControl.score + GoalManager.current.totalScore + score);
+        return (LightController.score + DeliverPoster.score + ChangeBulb.score + Mathf.Max(TempControl.score, 0) + GoalManager.current.totalScore + score);
     }
 
     IEnumerator ShowScoreNumber()
@@ -86,7 +86,7 @@ public class ScoreCard : MonoBehaviour
                 break;
             case scoreType.Temp:
                 temperatureScore.text = counter.ToString("n0");
-                if (counter == TempControl.score) { type = scoreType.Goals; counter = -1; }
+                if (counter == TempControl.score || TempControl.score<0) { type = scoreType.Goals; counter = -1; }
                 break;
             case scoreType.Goals:
                 goalsAchievedScore.text = counter.ToString("n0");
@@ -98,7 +98,7 @@ public class ScoreCard : MonoBehaviour
                 break;
             case scoreType.Final:
                 totalScore.text = counter.ToString("n0");
-                if(counter== (LightController.score+ DeliverPoster.score+ ChangeBulb.score+ TempControl.score+ GoalManager.current.totalScore + score)) { leaveButton.SetActive(true); highscoreButton.SetActive(true); StopCoroutine("ShowScoreNumber"); yield break; }
+                if(counter== (LightController.score+ DeliverPoster.score+ ChangeBulb.score+ Mathf.Max(TempControl.score,0)+ GoalManager.current.totalScore + score)) { leaveButton.SetActive(true); highscoreButton.SetActive(true); StopCoroutine("ShowScoreNumber"); yield break; }
                 break;
         }
         StartCoroutine("ShowScoreNumber");
