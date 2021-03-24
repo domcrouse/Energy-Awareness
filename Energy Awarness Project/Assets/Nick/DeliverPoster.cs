@@ -25,7 +25,7 @@ public class DeliverPoster : MonoBehaviour, iInteract
     public void Interact()
     {
         GameEvents.current.DeliverPoster(posterNum);
-        score += (posterNum * 5);
+        score += (posterNum * TimeLimit.current.TimeModifiedScore(5));
         posterNum = 0;
     }
 

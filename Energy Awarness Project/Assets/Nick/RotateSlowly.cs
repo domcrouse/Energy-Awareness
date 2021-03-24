@@ -11,7 +11,7 @@ public class RotateSlowly : MonoBehaviour
         rot = transform.rotation;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         transform.Rotate(rot.eulerAngles.x,rot.eulerAngles.y + rotateSpeed,rot.eulerAngles.z);
     }

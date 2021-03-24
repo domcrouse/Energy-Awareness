@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5415836086435882814}
   - component: {fileID: 1888859530}
   - component: {fileID: 1888859534}
-  m_Layer: 2
+  m_Layer: 8
   m_Name: LightSwitch
   m_TagString: Interactive
   m_Icon: {fileID: 0}
@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.74136, y: 2.2440994, z: 2.5467515}
+  m_Center: {x: 0.008208529, y: 0.10061157, z: 0.77337563}
 --- !u!114 &1888859530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458514299554081132, guid: be544b7b9c115db41bcce1c455e71721,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be544b7b9c115db41bcce1c455e71721, type: 3}

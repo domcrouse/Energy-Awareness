@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029951050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.52, y: 0.72, z: 0.41}
+  m_LocalRotation: {x: -0.035427976, y: -0.4500581, z: -0.017872812, w: 0.89211726}
+  m_LocalPosition: {x: -0.334, y: 0.72, z: 0.302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2562333304779717690}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -4.548, y: -53.54, z: 0}
 --- !u!108 &1029951052
 Light:
   m_ObjectHideFlags: 0
@@ -41,13 +41,13 @@ Light:
   m_GameObject: {fileID: 1029951050}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9746712, b: 0.8254717, a: 1}
   m_Intensity: 1
   m_Range: 1
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 91.61703
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -106,11 +106,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  energy: 0
-  energyMultiplyerLED: 0
-  lightOffValue: 0
-  lightOnVal: 1
-  standardColor: {r: 0, g: 0, b: 0, a: 0}
+  energy: 50
+  energyMultiplyerLED: 0.25
+  lightOffValue: 0.1
+  lightOnVal: 2
+  standardColor: {r: 1, g: 0.9746712, b: 0.8254717, a: 1}
   LEDColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2562333304779718085
 GameObject:

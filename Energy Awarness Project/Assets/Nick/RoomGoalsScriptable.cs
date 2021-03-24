@@ -22,10 +22,11 @@ public class Goal
 
     public int AwardScore()
     {
-        if (!hasAchieved) { hasAchieved = true; return scoreAward; }
+        if (!hasAchieved) { hasAchieved = true; return TimeLimit.current.TimeModifiedScore(scoreAward); }
         else { return 0; }
     }
     public int GetCurrentNum() { return currentNum; }
     public void AlterCurrentNum(int amountToAdd) { currentNum += amountToAdd; }
     public void ResetCurrent() { currentNum = 0; }
+    public void SetAchievedToFalse() { hasAchieved = false; }
 }

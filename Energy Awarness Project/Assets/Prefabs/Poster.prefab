@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2948120996701019727}
   - component: {fileID: 2948120996701019724}
   - component: {fileID: 2948120996701019760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Poster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,6 +399,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TriggerArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458514299554081132, guid: be544b7b9c115db41bcce1c455e71721,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be544b7b9c115db41bcce1c455e71721, type: 3}

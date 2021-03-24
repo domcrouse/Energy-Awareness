@@ -16,23 +16,28 @@ public class ScoreCard : MonoBehaviour
     public TMP_Text bulbsChangedScore;
     public TMP_Text temperatureScore;
     public TMP_Text goalsAchievedScore;
+    public TMP_Text quizResultScore;
     public TMP_Text totalScore;
 
     [Header("Buttons")]
     public GameObject leaveButton;
+    public GameObject highscoreButton;
 
     MovementController player1;
     MouseHandler player2;
+    public static ScoreCard current;
+    int score;
 
     float numberFreq = 0.05f;
     int counter = 0;
-    public enum scoreType { LightsOff,Posters,Bulbs,Temp,Goals,Final}
+    public enum scoreType { LightsOff,Posters,Bulbs,Temp,Goals,Quiz,Final}
     scoreType type = scoreType.LightsOff;
 
     private void Awake()
     {
         player1 = FindObjectOfType<MovementController>();
         player2 = FindObjectOfType<MouseHandler>();
+        current = this;
     }
 
     public void ShowDecision() { leaveRoomDecision.SetActive(true);
@@ -47,6 +52,7 @@ public class ScoreCard : MonoBehaviour
     }
     public void ShowQuiz()
     {
+        Time.timeScale = 0;
         quizScreen.SetActive(true);
     }
     public void ShowScore()
@@ -55,46 +61,58 @@ public class ScoreCard : MonoBehaviour
         StartCoroutine("ShowScoreNumber");
     }
 
+    public int GetFinalScore()
+    {
+        return (LightController.score + DeliverPoster.score + ChangeBulb.score + Mathf.Max(TempControl.score, 0) + GoalManager.current.totalScore + score);
+    }
+
     IEnumerator ShowScoreNumber()
     {
-        yield return new WaitForSeconds(numberFreq);
+        yield return new WaitForSecondsRealtime(numberFreq);
         counter++;
         switch (type)
         {
             case scoreType.LightsOff:
                 lightsOffScore.text = counter.ToString("n0");
-                if (counter == LightController.score) { type = scoreType.Posters; counter = 0; }
+                if (counter == LightController.score) { type = scoreType.Posters; counter = -1; }
                 break;
             case scoreType.Posters:
                 postersDeliveredScore.text = counter.ToString("n0");
-                if (counter == DeliverPoster.score) { type = scoreType.Bulbs; counter = 0; }
+                if (counter == DeliverPoster.score) { type = scoreType.Bulbs; counter = -1; }
                 break;
             case scoreType.Bulbs:
                 bulbsChangedScore.text = counter.ToString("n0");
-                if (counter == ChangeBulb.score) { type = scoreType.Temp; counter = 0; }
+                if (counter == ChangeBulb.score) { type = scoreType.Temp; counter = -1; }
                 break;
             case scoreType.Temp:
                 temperatureScore.text = counter.ToString("n0");
-                if (counter == TempControl.score) { type = scoreType.Goals; counter = 0; }
+                if (counter == TempControl.score || TempControl.score<0) { type = scoreType.Goals; counter = -1; }
                 break;
             case scoreType.Goals:
                 goalsAchievedScore.text = counter.ToString("n0");
-                if (counter == GoalManager.current.totalScore) { type = scoreType.Final; counter = 0; }
+                if (counter == GoalManager.current.totalScore) { type = scoreType.Quiz; counter = -1; }
+                break;
+            case scoreType.Quiz:
+                quizResultScore.text = counter.ToString("n0");
+                if (counter == score) { type = scoreType.Final; counter = -1; }
                 break;
             case scoreType.Final:
                 totalScore.text = counter.ToString("n0");
-                if(counter== LightController.score+ DeliverPoster.score+ ChangeBulb.score+ TempControl.score+ GoalManager.current.totalScore) { leaveButton.SetActive(true);StopCoroutine("ShowScoreNumber"); }
+                if(counter== (LightController.score+ DeliverPoster.score+ ChangeBulb.score+ Mathf.Max(TempControl.score,0)+ GoalManager.current.totalScore + score)) { leaveButton.SetActive(true); highscoreButton.SetActive(true); StopCoroutine("ShowScoreNumber"); yield break; }
                 break;
         }
         StartCoroutine("ShowScoreNumber");
     }
+    void AnswerScore() { score += TimeLimit.current.TimeModifiedScore(30); }
 
     private void Start()
     {
         GameEvents.current.onLeaveRoom += ShowDecision;
+        GameEvents.current.onCorrectAnswer += AnswerScore;
     }
     private void OnDestroy()
     {
         GameEvents.current.onLeaveRoom -= ShowDecision;
+        GameEvents.current.onCorrectAnswer -= AnswerScore;
     }
 }

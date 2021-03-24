@@ -15,16 +15,16 @@ MonoBehaviour:
   goals:
   - type: 0
     targetNumber: 8
-    scoreAward: 0
+    scoreAward: 60
   - type: 1
     targetNumber: 3
-    scoreAward: 0
+    scoreAward: 60
   - type: 2
-    targetNumber: 5
-    scoreAward: 0
+    targetNumber: 3
+    scoreAward: 30
   - type: 3
     targetNumber: 50
-    scoreAward: 0
+    scoreAward: 50
   - type: 4
     targetNumber: 17
-    scoreAward: 0
+    scoreAward: 30
