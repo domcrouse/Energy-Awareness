@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2324764815178889007}
   - component: {fileID: 4098299705068300389}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 8385617305124936634}
   - component: {fileID: 3316742992744037948}
   - component: {fileID: 3374511015591144189}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextTip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
