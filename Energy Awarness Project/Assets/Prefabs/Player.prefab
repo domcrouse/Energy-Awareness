@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589ffac16a7b3b941b81a866dbf21676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask: 0
+  layerMask: 8
 --- !u!114 &1669876250
 MonoBehaviour:
   m_ObjectHideFlags: 0

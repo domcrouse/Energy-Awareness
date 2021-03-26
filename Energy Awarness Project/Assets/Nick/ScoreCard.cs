@@ -54,6 +54,7 @@ public class ScoreCard : MonoBehaviour
     {
         Time.timeScale = 0;
         quizScreen.SetActive(true);
+        Debug.Log("Complete");
     }
     public void ShowScore()
     {
