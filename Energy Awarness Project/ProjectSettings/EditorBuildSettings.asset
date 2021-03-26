@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes to work on/Main Menu.unity
     guid: a75f977892bcdd5489116ac597024846
   - enabled: 1
-    path: Assets/Scenes to work on/DImi.unity
-    guid: 3f9a4874280f7eb468e9742617c8b5c5
+    path: Assets/Scenes to work on/Reception.unity
+    guid: 78945ae1e14d07d41bda74c213f8eeda
   - enabled: 1
     path: Assets/Scenes to work on/OfficeNick.unity
     guid: 37b8199079744324a9e05abd981fe9f6
+  - enabled: 1
+    path: Assets/Scenes to work on/DImi.unity
+    guid: 3f9a4874280f7eb468e9742617c8b5c5
   m_configObjects: {}

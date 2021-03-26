@@ -66,6 +66,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalSpeed: 1
   verticalSpeed: 1
+  minY: 315
+  maxY: 45
 --- !u!114 &1471681155531709859
 MonoBehaviour:
   m_ObjectHideFlags: 0

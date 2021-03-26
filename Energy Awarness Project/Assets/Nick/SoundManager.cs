@@ -25,23 +25,29 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        GameEvents.current.onTurnLightOn += SFXSwitch;
-        GameEvents.current.onTurnLightOff += SFXSwitch;
-        GameEvents.current.onDeliverPoster += SFXDeliver;
-        GameEvents.current.onChangeTemp += SFXThermo;
-        GameEvents.current.onCorrectAnswer += SFXRight;
-        GameEvents.current.onIncorrectAnswer += SFXWrong;
-        GameEvents.current.onUnlockDoor += SFXDoor;
+        if (GameEvents.current)
+        {
+            GameEvents.current.onTurnLightOn += SFXSwitch;
+            GameEvents.current.onTurnLightOff += SFXSwitch;
+            GameEvents.current.onDeliverPoster += SFXDeliver;
+            GameEvents.current.onChangeTemp += SFXThermo;
+            GameEvents.current.onCorrectAnswer += SFXRight;
+            GameEvents.current.onIncorrectAnswer += SFXWrong;
+            GameEvents.current.onUnlockDoor += SFXDoor;
+        }
     }
     private void OnDisable()
     {
-        GameEvents.current.onTurnLightOn -= SFXSwitch;
-        GameEvents.current.onTurnLightOff -= SFXSwitch;
-        GameEvents.current.onDeliverPoster -= SFXDeliver;
-        GameEvents.current.onChangeTemp -= SFXThermo;
-        GameEvents.current.onCorrectAnswer -= SFXRight;
-        GameEvents.current.onIncorrectAnswer -= SFXWrong;
-        GameEvents.current.onUnlockDoor -= SFXDoor;
+        if (GameEvents.current)
+        {
+            GameEvents.current.onTurnLightOn -= SFXSwitch;
+            GameEvents.current.onTurnLightOff -= SFXSwitch;
+            GameEvents.current.onDeliverPoster -= SFXDeliver;
+            GameEvents.current.onChangeTemp -= SFXThermo;
+            GameEvents.current.onCorrectAnswer -= SFXRight;
+            GameEvents.current.onIncorrectAnswer -= SFXWrong;
+            GameEvents.current.onUnlockDoor -= SFXDoor;
+        }
     }
     public void MuteSound(bool toggle)
     {

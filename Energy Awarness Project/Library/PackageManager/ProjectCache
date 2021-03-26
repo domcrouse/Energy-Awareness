@@ -1,21 +1,21 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Dmart/Documents/GitHub/Energy-Awareness/Energy Awarness
+    m_FilePath: C:/Users/nicke/Documents/GitHub/Energy-Awareness/Energy Awarness
       Project/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637522763483499412
-    m_Hash: 2933318888
+      ticks: 637522790135954765
+    m_Hash: 1310000179
   m_LockFileStatus:
-    m_FilePath: C:/Users/Dmart/Documents/GitHub/Energy-Awareness/Energy Awarness
+    m_FilePath: C:/Users/nicke/Documents/GitHub/Energy-Awareness/Energy Awarness
       Project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637522763491843408
+      ticks: 637523707242962823
     m_Hash: 1887345797
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -27,7 +27,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
@@ -123,7 +123,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.1
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.ide.rider@1.2.1
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
@@ -227,7 +227,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.3
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.ide.visualstudio@2.0.3
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
@@ -299,7 +299,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
@@ -369,7 +369,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 4.4.0
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.probuilder@4.4.0
       assetPath: Packages/com.unity.probuilder
       name: com.unity.probuilder
@@ -425,7 +425,6 @@ m_PackageAssets:
         - 4.5.0
         - 5.0.0-pre.7
         - 5.0.0-pre.10
-        - 5.0.1
         compatible:
         - 4.0.2
         - 4.0.3
@@ -452,7 +451,6 @@ m_PackageAssets:
         - 4.5.0
         - 5.0.0-pre.7
         - 5.0.0-pre.10
-        - 5.0.1
         verified: 4.4.0
       dependencies:
       - name: com.unity.settings-manager
@@ -506,7 +504,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.3-preview.6
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.progrids@3.0.3-preview.6
       assetPath: Packages/com.unity.progrids
       name: com.unity.progrids
@@ -584,7 +582,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 8.2.0
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.render-pipelines.universal@8.2.0
       assetPath: Packages/com.unity.render-pipelines.universal
       name: com.unity.render-pipelines.universal
@@ -635,7 +633,6 @@ m_PackageAssets:
         - 10.2.2
         - 10.3.1
         - 10.3.2
-        - 10.4.0
         compatible:
         - 8.2.0
         - 8.3.1
@@ -694,7 +691,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.18
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.test-framework@1.1.18
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
@@ -737,14 +734,12 @@ m_PackageAssets:
         - 1.1.19
         - 1.1.20
         - 1.1.22
-        - 1.1.24
         compatible:
         - 1.1.18
         - 1.1.19
         - 1.1.20
         - 1.1.22
-        - 1.1.24
-        verified: 1.1.24
+        verified: 1.1.22
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.0
@@ -787,7 +782,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
@@ -939,7 +934,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.6
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.timeline@1.3.6
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
@@ -1000,7 +995,6 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
-        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -1011,9 +1005,7 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
-        - 1.5.4
         - 1.6.0-pre.1
-        - 1.6.0-pre.3
         compatible:
         - 1.2.6
         - 1.2.7
@@ -1053,7 +1045,6 @@ m_PackageAssets:
         - 1.4.4
         - 1.4.5
         - 1.4.6
-        - 1.4.7
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -1064,9 +1055,7 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
-        - 1.5.4
         - 1.6.0-pre.1
-        - 1.6.0-pre.3
         verified: 1.3.7
       dependencies: []
       resolvedDependencies: []
@@ -2906,7 +2895,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.ext.nunit@1.0.0
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
@@ -2968,7 +2957,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 8.2.0
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.render-pipelines.core@8.2.0
       assetPath: Packages/com.unity.render-pipelines.core
       name: com.unity.render-pipelines.core
@@ -3057,12 +3046,9 @@ m_PackageAssets:
         - 7.4.2
         - 7.4.3
         - 7.5.1
-        - 7.5.2
-        - 7.5.3
         - 8.0.1
         - 8.1.0
         - 8.2.0
-        - 8.3.1
         - 9.0.0-preview.13
         - 9.0.0-preview.35
         - 9.0.0-preview.38
@@ -3070,15 +3056,8 @@ m_PackageAssets:
         - 9.0.0-preview.77
         - 10.0.0-preview.30
         - 10.1.0
-        - 10.2.0
-        - 10.2.1
-        - 10.2.2
-        - 10.3.1
-        - 10.3.2
-        - 10.4.0
         compatible:
         - 8.2.0
-        - 8.3.1
         - 9.0.0-preview.13
         - 9.0.0-preview.35
         - 9.0.0-preview.38
@@ -3121,7 +3100,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 8.2.0
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.shadergraph@8.2.0
       assetPath: Packages/com.unity.shadergraph
       name: com.unity.shadergraph
@@ -3225,7 +3204,6 @@ m_PackageAssets:
         - 10.2.2
         - 10.3.1
         - 10.3.2
-        - 10.4.0
         compatible:
         - 8.2.0
         - 8.3.1
@@ -3276,7 +3254,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.3
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.settings-manager@1.0.3
       assetPath: Packages/com.unity.settings-manager
       name: com.unity.settings-manager
@@ -3335,7 +3313,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 4.0.9
       source: 1
-      resolvedPath: C:\Users\Dmart\Documents\GitHub\Energy-Awareness\Energy Awarness
+      resolvedPath: C:\Users\nicke\Documents\GitHub\Energy-Awareness\Energy Awarness
         Project\Library\PackageCache\com.unity.searcher@4.0.9
       assetPath: Packages/com.unity.searcher
       name: com.unity.searcher
@@ -3363,7 +3341,6 @@ m_PackageAssets:
         - 4.2.0
         - 4.3.0
         - 4.3.1
-        - 4.3.2
         - 4.6.0-preview
         - 4.7.0-preview
         compatible:
@@ -3378,7 +3355,6 @@ m_PackageAssets:
         - 4.2.0
         - 4.3.0
         - 4.3.1
-        - 4.3.2
         - 4.6.0-preview
         - 4.7.0-preview
         verified: 4.0.9
@@ -3409,5 +3385,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/Dmart/Documents/GitHub/Energy-Awareness/Energy Awarness Project/Packages
+m_ProjectPath: C:/Users/nicke/Documents/GitHub/Energy-Awareness/Energy Awarness Project/Packages
 m_EditorVersion: 2020.1.14f1 (d81f64f5201d)

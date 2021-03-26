@@ -54,7 +54,6 @@ public class ScoreCard : MonoBehaviour
     {
         Time.timeScale = 0;
         quizScreen.SetActive(true);
-        Debug.Log("Complete");
     }
     public void ShowScore()
     {
@@ -74,31 +73,31 @@ public class ScoreCard : MonoBehaviour
         switch (type)
         {
             case scoreType.LightsOff:
-                lightsOffScore.text = counter.ToString("n0");
+                lightsOffScore.text = counter.ToString("n0") + "<size=10>pts</size>";
                 if (counter == LightController.score) { type = scoreType.Posters; counter = -1; }
                 break;
             case scoreType.Posters:
-                postersDeliveredScore.text = counter.ToString("n0");
+                postersDeliveredScore.text = counter.ToString("n0") + "<size=10>pts</size>";
                 if (counter == DeliverPoster.score) { type = scoreType.Bulbs; counter = -1; }
                 break;
             case scoreType.Bulbs:
-                bulbsChangedScore.text = counter.ToString("n0");
+                bulbsChangedScore.text = counter.ToString("n0") + "<size=10>pts</size>";
                 if (counter == ChangeBulb.score) { type = scoreType.Temp; counter = -1; }
                 break;
             case scoreType.Temp:
-                temperatureScore.text = counter.ToString("n0");
+                temperatureScore.text = counter.ToString("n0") + "<size=10>pts</size>";
                 if (counter == TempControl.score || TempControl.score<0) { type = scoreType.Goals; counter = -1; }
                 break;
             case scoreType.Goals:
-                goalsAchievedScore.text = counter.ToString("n0");
+                goalsAchievedScore.text = counter.ToString("n0") + "<size=10>pts</size>";
                 if (counter == GoalManager.current.totalScore) { type = scoreType.Quiz; counter = -1; }
                 break;
             case scoreType.Quiz:
-                quizResultScore.text = counter.ToString("n0");
+                quizResultScore.text = counter.ToString("n0") + "<size=10>pts</size>";
                 if (counter == score) { type = scoreType.Final; counter = -1; }
                 break;
             case scoreType.Final:
-                totalScore.text = counter.ToString("n0");
+                totalScore.text = counter.ToString("n0") + "<size=10>pts</size>";
                 if(counter== (LightController.score+ DeliverPoster.score+ ChangeBulb.score+ Mathf.Max(TempControl.score,0)+ GoalManager.current.totalScore + score)) { leaveButton.SetActive(true); highscoreButton.SetActive(true); StopCoroutine("ShowScoreNumber"); yield break; }
                 break;
         }
