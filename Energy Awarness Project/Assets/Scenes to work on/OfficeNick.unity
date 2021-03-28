@@ -1585,6 +1585,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2948120996701019727, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f3742267cc8c7a46b20e52a2fb0e360, type: 2}
     - target: {fileID: 2948120996701019761, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
         type: 3}
       propertyPath: m_RootOrder
@@ -2673,6 +2678,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2948120996701019727, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f3742267cc8c7a46b20e52a2fb0e360, type: 2}
     - target: {fileID: 2948120996701019761, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
         type: 3}
       propertyPath: m_RootOrder
@@ -3756,6 +3766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2948120996701019727, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f3742267cc8c7a46b20e52a2fb0e360, type: 2}
     - target: {fileID: 2948120996701019761, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
         type: 3}
       propertyPath: m_RootOrder
@@ -5520,6 +5535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster
       objectReference: {fileID: 0}
+    - target: {fileID: 2948120996701019727, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f3742267cc8c7a46b20e52a2fb0e360, type: 2}
     - target: {fileID: 2948120996701019761, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
         type: 3}
       propertyPath: m_RootOrder
@@ -6828,6 +6848,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Poster
       objectReference: {fileID: 0}
+    - target: {fileID: 2948120996701019727, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f3742267cc8c7a46b20e52a2fb0e360, type: 2}
     - target: {fileID: 2948120996701019761, guid: 97c7f0e9ab1585c46b0f45ed1522a10b,
         type: 3}
       propertyPath: m_RootOrder
