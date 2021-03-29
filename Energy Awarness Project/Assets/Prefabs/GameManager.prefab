@@ -172,3 +172,4 @@ MonoBehaviour:
   rightAnswer: {fileID: 8300000, guid: a35ef8e2789fe3744bef265a1825b118, type: 3}
   wrongAnswer: {fileID: 8300000, guid: 5fc63b8a3994bc84c85d94978c197d3d, type: 3}
   unlockDoor: {fileID: 8300000, guid: 2bd3c3e693d1be5418fdfd57440bc169, type: 3}
+  scoreCount: {fileID: 8300000, guid: f10a42d7644ef2949a373dcb3cd4b3f5, type: 3}

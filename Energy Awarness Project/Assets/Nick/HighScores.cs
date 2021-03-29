@@ -68,7 +68,7 @@ public class HighScores : MonoBehaviour
         highscoreDisplayTxt.text = "";
         for (int i = 0; i < highscoresList.Length; i++)
         {
-            highscoreDisplayTxt.text += highscoresList[i].username + ": " + highscoresList[i].score + "\n";
+            highscoreDisplayTxt.text += highscoresList[i].username + ": " + highscoresList[i].score + "<size=10>pts</size>\n";
         }
         if (highscoresList.Length == 0) { highscoreDisplayTxt.text = "Currently there are no highscores."; }
     }

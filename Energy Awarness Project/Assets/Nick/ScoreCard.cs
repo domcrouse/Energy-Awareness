@@ -40,12 +40,16 @@ public class ScoreCard : MonoBehaviour
         current = this;
     }
 
-    public void ShowDecision() { leaveRoomDecision.SetActive(true);
+    public void ShowDecision() 
+    { 
+        leaveRoomDecision.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         player1.enabled = false;player2.enabled = false;
     }
-    public void HideDecision() { leaveRoomDecision.SetActive(false);
+    public void HideDecision() 
+    { 
+        leaveRoomDecision.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         player1.enabled = true; player2.enabled = true;
@@ -69,6 +73,7 @@ public class ScoreCard : MonoBehaviour
     IEnumerator ShowScoreNumber()
     {
         yield return new WaitForSecondsRealtime(numberFreq);
+        GameEvents.current.CountScore();
         counter++;
         switch (type)
         {

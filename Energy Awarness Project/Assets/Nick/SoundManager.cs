@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip rightAnswer;
     public AudioClip wrongAnswer;
     public AudioClip unlockDoor;
+    public AudioClip scoreCount;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class SoundManager : MonoBehaviour
             GameEvents.current.onCorrectAnswer += SFXRight;
             GameEvents.current.onIncorrectAnswer += SFXWrong;
             GameEvents.current.onUnlockDoor += SFXDoor;
+            GameEvents.current.onCountScore += SFXScore;
         }
     }
     private void OnDisable()
@@ -47,6 +49,7 @@ public class SoundManager : MonoBehaviour
             GameEvents.current.onCorrectAnswer -= SFXRight;
             GameEvents.current.onIncorrectAnswer -= SFXWrong;
             GameEvents.current.onUnlockDoor -= SFXDoor;
+            GameEvents.current.onCountScore -= SFXScore;
         }
     }
     public void MuteSound(bool toggle)
@@ -73,4 +76,5 @@ public class SoundManager : MonoBehaviour
     void SFXRight() { source.PlayOneShot(rightAnswer, 0.9f); }
     void SFXWrong() { source.PlayOneShot(wrongAnswer, 0.2f); }
     void SFXDoor(int id) { source.PlayOneShot(unlockDoor, 1); }
+    void SFXScore() { source.PlayOneShot(scoreCount, 0.3f); }
 }

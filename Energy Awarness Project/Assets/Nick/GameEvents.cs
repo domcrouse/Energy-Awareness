@@ -119,4 +119,12 @@ public class GameEvents : MonoBehaviour
             onIncorrectAnswer();
         }
     }
+    public event Action onCountScore;
+    public void CountScore()
+    {
+        if (onCountScore != null)
+        {
+            onCountScore();
+        }
+    }
 }

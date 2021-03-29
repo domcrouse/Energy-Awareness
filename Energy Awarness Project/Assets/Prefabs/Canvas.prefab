@@ -575,6 +575,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1454309629567655448}
     m_Modifications:
+    - target: {fileID: 2924756572655606629, guid: a4b850ce1a015c640b97da5ec199a372,
+        type: 3}
+      propertyPath: m_text
+      value: Questions loading...
+      objectReference: {fileID: 0}
     - target: {fileID: 2924756572947371385, guid: a4b850ce1a015c640b97da5ec199a372,
         type: 3}
       propertyPath: m_Pivot.x
